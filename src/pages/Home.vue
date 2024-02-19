@@ -14,7 +14,7 @@
             <p class="mt-4 text-justify md:w-96">
               I'm studying at the Technological Institute of the Americas(ITLA).
               I'm 19 years old. I am passionate about programming. I can work in
-              a team,in addition, I am organized and responsible. I enjoy
+              a team, in addition, I am organized and responsible. I enjoy
               learning everything related to this area, so my goal is a
               challenging and dynamic position where I can acquire new
               knowledge.
