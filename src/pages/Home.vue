@@ -1,7 +1,7 @@
 <template>
   <div class="min-h-screen text-black md:mr-auto md:ml-auto svg">
     <div class="width ml-auto mr-auto">
-      <NavBar />
+      <TopBar />
 
       <main class="md:mt-16">
         <div
@@ -37,12 +37,12 @@
 
 <script>
 import Typed from "typed.js";
-import NavBar from "../Layout/NavBar.vue";
+import TopBar from "../Layout/TopBar.vue";
 
 export default {
   name: "Home",
 
-  components: { NavBar },
+  components: { TopBar },
   data() {
     return {
       typed: null,

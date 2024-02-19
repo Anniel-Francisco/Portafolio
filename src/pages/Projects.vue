@@ -1,7 +1,7 @@
 <template>
   <div class="min-h-screen text-black md:mr-auto md:ml-auto svg z-100">
     <div class="width ml-auto mr-auto">
-      <NavBar />
+      <TopBar />
       <main class="main">
         <swiper
           :slides-per-view="1"
@@ -34,7 +34,7 @@
 </template>
 
 <script>
-import NavBar from "../Layout/NavBar.vue";
+import TopBar from "../Layout/TopBar.vue";
 import {
   Autoplay,
   Navigation,
@@ -46,7 +46,7 @@ import { Swiper, SwiperSlide } from "swiper/vue";
 
 export default {
   name: "Projects",
-  components: { NavBar, Swiper, SwiperSlide },
+  components: { TopBar, Swiper, SwiperSlide },
   data() {
     return {
       modules: [Navigation, Pagination, Scrollbar, A11y, Autoplay],
