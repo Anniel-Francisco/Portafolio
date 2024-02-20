@@ -38,7 +38,7 @@ export default {
         {
           name: "QUASAR FRAMEWORK",
           icon: [],
-          img: "/src/assets/quasar_framework_icon.png",
+          img: "../assets/quasar_framework_icon.png",
         },
       ],
     };
