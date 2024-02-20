@@ -41,6 +41,11 @@ export default {
           icon: [],
           img: "src/assets/quasar-framework-icon.png",
         },
+        {
+          name: "TAILWIND CSS",
+          icon: [],
+          img: "src/assets/tailwind-css-icon.png",
+        },
       ],
     };
   },
