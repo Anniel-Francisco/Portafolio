@@ -8,18 +8,28 @@ import router from "./router/router";
 
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
-
+import { createApp } from "vue";
+import App from "./App.vue";
 import {
   faUser,
   faHouse,
   faFolder,
   faMobile,
+  faCode,
   faGlobe,
 } from "@fortawesome/free-solid-svg-icons";
+import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 
-library.add(faUser, faHouse, faFolder, faMobile, faGlobe);
-import { createApp } from "vue";
-import App from "./App.vue";
+library.add(
+  faUser,
+  faHouse,
+  faFolder,
+  faMobile,
+  faCode,
+  faGlobe,
+  faGithub,
+  faLinkedin
+);
 
 createApp(App)
   .use(router)

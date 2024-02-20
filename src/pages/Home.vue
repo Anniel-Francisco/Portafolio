@@ -1,48 +1,58 @@
 <template>
-  <div class="min-h-screen text-black md:mr-auto md:ml-auto svg">
-    <div class="width ml-auto mr-auto">
-      <TopBar />
-
-      <main class="md:mt-16">
-        <div
-          class="flex p-5 flex-wrap items-center max-lg:justify-center md:justify-evenly"
-        >
-          <div class="text-lg">
-            <h2 class="md:w-96">
-              <span class="text-2xl font-bold" id="typing-element"></span>
-            </h2>
-            <p class="mt-4 text-justify md:w-96">
-              I'm studying at the Technological Institute of the Americas(ITLA).
-              I'm 19 years old. I am passionate about programming. I can work in
-              a team, in addition, I am organized and responsible. I enjoy
-              learning everything related to this area, so my goal is a
-              challenging and dynamic position where I can acquire new
-              knowledge.
-            </p>
-          </div>
-          <div
-            class="w-80 max-lg:flex max-lg:justify-center lg:justify-end max-lg:mt-5"
-          >
-            <img
-              class="max-lg:w-72 animate__animated animate__fadeIn transition-all duration-300 bg-slate-400 hover:shadow-lg hover:shadow-green-300 shadow-slate-400"
-              src="/src/assets/GIF-lenguajes.gif"
-              alt=""
-            />
-          </div>
+  <div class="flex flex-col max-md:flex-wrap justify-evenly items-center home">
+    <div class="flex items-center">
+      <!-- Description -->
+      <div class="w-full">
+        <div class="mb-5">
+          <span class="text-3xl font-bold" id="typing-element"></span>
         </div>
-      </main>
+        <div>
+          <p class="text-xl text-justify">
+            I'm studying at the Technological Institute of the Americas(ITLA).
+            I'm 19 years old. I am passionate about programming. I can work in a
+            team, in addition, I am organized and responsible. I enjoy learning
+            everything related to this area, so my goal is a challenging and
+            dynamic position where I can acquire new knowledge.
+          </p>
+        </div>
+      </div>
+      <!-- Image -->
+      <div class="flex md:justify-end w-full">
+        <img class="main__image" src="../assets/GIF-lenguajes.gif" />
+      </div>
+    </div>
+    <!-- Links -->
+    <div class="links flex justify-end items-end w-full">
+      <div class="hover:translate-y-1 duration-150">
+        <a
+          href="https://github.com/Anniel-Francisco/Portafolio.git"
+          target="_blank"
+        >
+          <font-awesome-icon
+            style="font-size: 25px"
+            :icon="['fab', 'github']"
+          />
+        </a>
+      </div>
+      <div class="ml-3 hover:translate-y-1 duration-150">
+        <a
+          href="https://www.linkedin.com/in/anniel-francisco-reyes-javier-b22347274/"
+          target="_blank"
+        >
+          <font-awesome-icon
+            style="font-size: 25px"
+            :icon="['fab', 'linkedin']"
+          />
+        </a>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
 import Typed from "typed.js";
-import TopBar from "../Layout/TopBar.vue";
-
 export default {
   name: "Home",
-
-  components: { TopBar },
   data() {
     return {
       typed: null,
@@ -68,30 +78,15 @@ export default {
       this.typed = null;
     }
   },
-
-  methods: {
-    Menu(e) {
-      let list = document.querySelector("ul");
-      e.name === "menu"
-        ? ((e.name = "close"),
-          list.classList.add("top-[80px]"),
-          list.classList.add("opacity-100"))
-        : ((e.name = "menu"),
-          list.classList.remove("top-[80px]"),
-          list.classList.remove("opacity-100"));
-    },
-  },
 };
 </script>
 
-<style>
-.width {
-  width: 70%;
+<style scoped>
+.home {
+  width: 100%;
+  height: calc(100vh - 70px);
 }
-
-@media (max-width: 1024px) {
-  .width {
-    width: 90%;
-  }
+.main__image {
+  width: 450px;
 }
 </style>

@@ -1,40 +1,34 @@
 <template>
-  <div class="min-h-screen text-black md:mr-auto md:ml-auto svg z-100">
-    <div class="width ml-auto mr-auto">
-      <TopBar />
-      <main class="main">
-        <swiper
-          :slides-per-view="1"
-          :modules="modules"
-          :space-between="5"
-          effect="autoplay"
-          navigation
-          :pagination="{ clickable: true }"
-          :scrollbar="{ draggable: true }"
-          class="swiper-content"
-        >
-          <swiper-slide
-            class="element-swiper uppercase"
-            v-for="(project, index) in projects"
-            :key="index"
-          >
-            <div class="content">
-              <h2>{{ project.name }}</h2>
-              <div class="flex justify-center">
-                <a title="Click" :href="project.route">
-                  <font-awesome-icon :icon="['fas', 'globe']" size="2xl" />
-                </a>
-              </div>
-            </div>
-          </swiper-slide>
-        </swiper>
-      </main>
-    </div>
+  <div class="projects flex items-center">
+    <swiper
+      :slides-per-view="1"
+      :modules="modules"
+      :space-between="5"
+      effect="autoplay"
+      navigation
+      :pagination="{ clickable: true }"
+      :scrollbar="{ draggable: true }"
+      class="swiper-content flex rounded-xl justify-center items-center"
+    >
+      <swiper-slide
+        class="element-swiper rounded-xl bg-slate-300 uppercase"
+        v-for="(project, index) in projects"
+        :key="index"
+      >
+        <div class="content">
+          <h2 class="text-5xl font-bold">{{ project.name }}</h2>
+          <div class="flex justify-center mt-2">
+            <a target="_blank" title="Click" :href="project.route">
+              <font-awesome-icon :icon="['fas', 'globe']" size="2xl" />
+            </a>
+          </div>
+        </div>
+      </swiper-slide>
+    </swiper>
   </div>
 </template>
 
 <script>
-import TopBar from "../Layout/TopBar.vue";
 import {
   Autoplay,
   Navigation,
@@ -43,10 +37,9 @@ import {
   A11y,
 } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/vue";
-
 export default {
   name: "Projects",
-  components: { TopBar, Swiper, SwiperSlide },
+  components: { Swiper, SwiperSlide },
   data() {
     return {
       modules: [Navigation, Pagination, Scrollbar, A11y, Autoplay],
@@ -71,26 +64,17 @@ export default {
       ],
     };
   },
-  methods: {},
 };
 </script>
+
 <style scoped>
-.width {
-  width: 70%;
+.projects {
+  width: 100%;
+  height: calc(100vh - 70px);
 }
 
-.main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 85vh;
-}
 .swiper-content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 300px;
+  height: 90%;
   width: 100%;
 }
 
@@ -98,17 +82,5 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 50px;
-}
-
-.element-swiper h2 {
-  font-size: 50px;
-  font-weight: 700;
-}
-
-@media (max-width: 1024px) {
-  .width {
-    width: 90%;
-  }
 }
 </style>
