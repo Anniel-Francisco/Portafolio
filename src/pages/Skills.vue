@@ -39,12 +39,12 @@ export default {
         {
           name: "QUASAR FRAMEWORK",
           icon: [],
-          img: "/assets/quasar-framework-icon.png",
+          img: "../assets/quasar-framework-icon.png",
         },
         {
           name: "TAILWIND CSS",
           icon: [],
-          img: "/assets/tailwind-css-icon.png",
+          img: "../assets/tailwind-css-icon.png",
         },
       ],
     };
