@@ -1,6 +1,6 @@
 <template>
   <div class="content__contact">
-    <div class="grid gap-5 grid-cols-3 pt-5">
+    <div class="grid gap-5 grid-cols-3 max-md:grid-cols-1 pt-5">
       <div
         class="duration-300 rounded-lg border border-solid border-black flex flex-col justify-center items-start p-5"
         v-for="(contact, index) of data"
@@ -67,6 +67,11 @@ export default {
 <style scoped>
 .content__contact {
   width: 100%;
-  height: calc(100vh - 70px);
+}
+
+@media (min-width: 768px) {
+  .content__contact {
+    height: calc(100vh - 70px);
+  }
 }
 </style>

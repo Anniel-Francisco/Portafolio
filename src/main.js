@@ -18,8 +18,18 @@ import {
   faCode,
   faGlobe,
   faEnvelope,
+  faDatabase,
 } from "@fortawesome/free-solid-svg-icons";
-import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
+import {
+  faLinkedin,
+  faGithub,
+  faHtml5,
+  faCss3Alt,
+  faGitAlt,
+  faJs,
+  faReact,
+  faVuejs,
+} from "@fortawesome/free-brands-svg-icons";
 
 library.add(
   faUser,
@@ -30,7 +40,14 @@ library.add(
   faGlobe,
   faGithub,
   faLinkedin,
-  faEnvelope
+  faEnvelope,
+  faHtml5,
+  faCss3Alt,
+  faDatabase,
+  faGitAlt,
+  faJs,
+  faReact,
+  faVuejs
 );
 
 createApp(App)

@@ -70,7 +70,7 @@ export default {
 <style scoped>
 .projects {
   width: 100%;
-  height: calc(100vh - 70px);
+  height: 100vh;
 }
 
 .swiper-content {
@@ -82,5 +82,11 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media (min-width: 768px) {
+  .projects {
+    height: calc(100vh - 70px);
+  }
 }
 </style>

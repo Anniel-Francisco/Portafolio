@@ -31,7 +31,9 @@
       </div>
     </div>
 
-    <router-view />
+    <div class="main__content">
+      <router-view />
+    </div>
   </div>
 </template>
 
@@ -82,10 +84,16 @@ export default {
 
 <style scoped>
 .content {
-  width: 80%;
+  width: 90%;
 }
 .topbar {
   height: 70px;
   width: 100%;
+}
+
+@media (min-width: 768px) {
+  .content {
+    width: 80%;
+  }
 }
 </style>

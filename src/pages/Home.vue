@@ -1,6 +1,6 @@
 <template>
-  <div class="flex flex-col max-md:flex-wrap justify-evenly items-center home">
-    <div class="flex items-center">
+  <div class="flex flex-col justify-evenly items-center home">
+    <div class="flex items-center max-md:flex-wrap">
       <!-- Description -->
       <div class="w-full">
         <div class="mb-5">
@@ -18,7 +18,7 @@
       </div>
       <!-- Image -->
       <div class="flex md:justify-end w-full">
-        <img class="main__image" src="../assets/GIF-lenguajes.gif" />
+        <img class="image" src="../assets/GIF-lenguajes.gif" />
       </div>
     </div>
     <!-- Links -->
@@ -84,9 +84,14 @@ export default {
 <style scoped>
 .home {
   width: 100%;
-  height: calc(100vh - 70px);
 }
-.main__image {
-  width: 450px;
+.image {
+  width: 400px;
+}
+
+@media (min-width: 768px) {
+  .home {
+    height: calc(100vh - 70px);
+  }
 }
 </style>
