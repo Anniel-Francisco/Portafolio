@@ -12,6 +12,7 @@
           :icon="skill.icon"
           size="2xl"
         />
+
         <img v-if="skill.img" :src="skill.img" class="w-8 mr-3" />
         <span class="font-semibold text-xl uppercase text-black">
           {{ skill.name }}
@@ -38,7 +39,7 @@ export default {
         {
           name: "QUASAR FRAMEWORK",
           icon: [],
-          img: "../assets/quasar_framework_icon.png",
+          img: "src/assets/quasar-framework-icon.png",
         },
       ],
     };
