@@ -17,6 +17,7 @@ import {
   faMobile,
   faCode,
   faGlobe,
+  faEnvelope,
 } from "@fortawesome/free-solid-svg-icons";
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 
@@ -28,7 +29,8 @@ library.add(
   faCode,
   faGlobe,
   faGithub,
-  faLinkedin
+  faLinkedin,
+  faEnvelope
 );
 
 createApp(App)
