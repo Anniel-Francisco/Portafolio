@@ -1,7 +1,5 @@
 <template>
-  <div
-    class="flex flex-col justify-between max-md:justify-evenly items-center home"
-  >
+  <div class="flex flex-col justify-evenly items-center home">
     <div class="flex items-center max-md:flex-wrap max-md:pt-5">
       <!-- Description -->
       <div class="w-full">
@@ -24,7 +22,7 @@
       </div>
     </div>
     <!-- Links -->
-    <div class="links flex justify-end items-end pb-2 w-full">
+    <div class="links flex justify-end items-end max-md:pb-2 w-full">
       <div class="hover:-translate-y-1 duration-150">
         <a
           href="https://github.com/Anniel-Francisco/Portafolio.git"
@@ -58,7 +56,6 @@ export default {
   data() {
     return {
       typed: null,
-      links: [],
     };
   },
   mounted() {

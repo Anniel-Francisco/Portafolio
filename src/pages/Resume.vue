@@ -21,7 +21,7 @@
             class="btn__download bg-red-700 text-white font-semibold uppercase text-center w-full"
             @click="downloadPDF(file.file)"
           >
-            Download
+            View
           </button>
         </div>
       </li>
@@ -48,20 +48,11 @@ export default {
   },
   methods: {
     downloadPDF(url) {
-      fetch(url)
-        .then((response) => response.blob())
-        .then((blob) => {
-          const url = window.URL.createObjectURL(new Blob([blob]));
-          const link = document.createElement("a");
-          link.href = url;
-          link.setAttribute("download", "Resume.pdf");
-          document.body.appendChild(link);
-          link.click();
-          document.body.removeChild(link);
-        })
-        .catch((error) => {
-          console.error("Error al descargar el PDF:", error);
-        });
+      const link = document.createElement("a");
+      link.href = url;
+      link.target = "_blank";
+
+      link.click();
     },
   },
 };
