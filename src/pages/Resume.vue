@@ -1,8 +1,8 @@
 <template>
-  <div class="resume">
+  <div class="resume pt-5">
     <ul class="grid grid-cols-4 max-md:grid-cols-1 list-none gap-5">
       <li
-        class="flex flex-col rounded-xl rounded-b-lg justify-between border-2 pt-5 border-solid border-red-700"
+        class="flex flex-col shadow-lg hover:shadow-red-700 duration-300 rounded-xl rounded-b-lg justify-between border-2 pt-5 border-solid border-red-700"
         v-for="(file, index) in files"
         :key="index"
       >

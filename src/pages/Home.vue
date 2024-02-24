@@ -1,13 +1,15 @@
 <template>
-  <div class="flex flex-col justify-evenly items-center home">
-    <div class="flex items-center max-md:flex-wrap">
+  <div
+    class="flex flex-col justify-between max-md:justify-evenly items-center home"
+  >
+    <div class="flex items-center max-md:flex-wrap max-md:pt-5">
       <!-- Description -->
       <div class="w-full">
-        <div class="mb-5">
+        <div>
           <span class="text-3xl font-bold" id="typing-element"></span>
         </div>
-        <div>
-          <p class="text-xl text-justify">
+        <div class="mt-5 mb-5">
+          <p class="text-xl text-justify max-md:text-2xl">
             I'm studying at the Technological Institute of the Americas(ITLA).
             I'm 19 years old. I am passionate about programming. I can work in a
             team, in addition, I am organized and responsible. I enjoy learning
@@ -17,13 +19,13 @@
         </div>
       </div>
       <!-- Image -->
-      <div class="flex md:justify-end w-full">
-        <img class="image" src="../assets/GIF-lenguajes.gif" />
+      <div class="flex md:justify-end w-full justify-center">
+        <img class="image max-w-full" src="../assets/GIF-lenguajes.gif" />
       </div>
     </div>
     <!-- Links -->
-    <div class="links flex justify-end items-end w-full">
-      <div class="hover:translate-y-1 duration-150">
+    <div class="links flex justify-end items-end pb-2 w-full">
+      <div class="hover:-translate-y-1 duration-150">
         <a
           href="https://github.com/Anniel-Francisco/Portafolio.git"
           target="_blank"
@@ -34,7 +36,7 @@
           />
         </a>
       </div>
-      <div class="ml-3 hover:translate-y-1 duration-150">
+      <div class="hover:-translate-y-1 ml-3 duration-150">
         <a
           href="https://www.linkedin.com/in/anniel-francisco-reyes-javier-b22347274/"
           target="_blank"
@@ -56,6 +58,7 @@ export default {
   data() {
     return {
       typed: null,
+      links: [],
     };
   },
   mounted() {
@@ -91,7 +94,12 @@ export default {
 
 @media (min-width: 768px) {
   .home {
-    height: calc(100vh - 70px);
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+  .image {
+    max-width: 100%;
   }
 }
 </style>

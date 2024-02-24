@@ -1,19 +1,25 @@
 <template>
-  <div class="content mr-auto ml-auto">
-    <div class="topbar flex items-center justify-between">
+  <div class="content mr-auto ml-auto max-w-full">
+    <div class="topbar sticky top-0 bg-white flex items-center justify-between">
       <!-- TopBar Left -->
-      <div class="flex items-center">
+      <div class="topbar__left flex items-center">
         <img
           class="w-14 cursor-pointer"
           @click="goToPage('/home')"
           src="../assets/programmer.png"
           alt=""
         />
-        <span class="ml-3 font-bold">AFRJ</span>
+        <span class="ml-3 font-bold max-md:text-lg">AFRJ</span>
       </div>
       <!-- TopBar Right -->
-      <div>
-        <ul class="flex list-none items-center">
+      <div class="topbar__right">
+        <font-awesome-icon
+          size="2xl"
+          class="bars"
+          @click="showMenu"
+          :icon="['fas', 'bars']"
+        />
+        <ul class="list flex max-md:flex-col list-none items-center">
           <li
             v-for="(item, index) of routes"
             @click="goToPage(item.route)"
@@ -83,6 +89,11 @@ export default {
     goToPage(route) {
       this.$router.push({ path: route });
     },
+
+    showMenu() {
+      const list = document.querySelector(".list");
+      list.style.display = "flex";
+    },
   },
 };
 </script>
@@ -97,8 +108,25 @@ export default {
 }
 
 @media (min-width: 768px) {
+  .main__content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    height: calc(100vh - 70px);
+  }
   .content {
     width: 80%;
+  }
+  .bars {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .list {
+    display: none;
   }
 }
 </style>

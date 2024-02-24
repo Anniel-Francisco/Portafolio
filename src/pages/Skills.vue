@@ -1,8 +1,10 @@
 <template>
   <div class="skills">
-    <div class="content__skills grid grid-cols-3 max-md:grid-cols-1 gap-5">
+    <div
+      class="content__skills max-md:pb-5 grid grid-cols-3 max-md:grid-cols-1 gap-5"
+    >
       <div
-        class="skill shadow-lg flex items-center rounded-lg justify-center bg-green-300"
+        class="skill shadow-lg hover:shadow-green-300 duration-300 flex items-center rounded-lg justify-center bg-green-300"
         v-for="(skill, index) of skills"
         :key="index"
       >

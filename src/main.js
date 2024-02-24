@@ -19,6 +19,7 @@ import {
   faGlobe,
   faEnvelope,
   faDatabase,
+  faBars,
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faLinkedin,
@@ -47,7 +48,8 @@ library.add(
   faGitAlt,
   faJs,
   faReact,
-  faVuejs
+  faVuejs,
+  faBars
 );
 
 createApp(App)
