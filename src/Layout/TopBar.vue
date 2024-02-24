@@ -3,7 +3,12 @@
     <div class="topbar flex items-center justify-between">
       <!-- TopBar Left -->
       <div class="flex items-center">
-        <img class="w-14" src="../assets/programmer.png" alt="" />
+        <img
+          class="w-14 cursor-pointer"
+          @click="goToPage('/home')"
+          src="../assets/programmer.png"
+          alt=""
+        />
         <span class="ml-3 font-bold">AFRJ</span>
       </div>
       <!-- TopBar Right -->
