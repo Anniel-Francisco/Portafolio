@@ -19,9 +19,9 @@
         <div class="mt-3">
           <button
             class="btn__download bg-red-700 text-white font-semibold uppercase text-center w-full"
-            @click="downloadPDF(file.file)"
+            @click="downloadPDF(file.file, file.name)"
           >
-            View
+            Download
           </button>
         </div>
       </li>
@@ -47,10 +47,11 @@ export default {
     };
   },
   methods: {
-    downloadPDF(url) {
+    downloadPDF(fileUrl, fileName) {
       const link = document.createElement("a");
-      link.href = url;
+      link.href = fileUrl;
       link.target = "_blank";
+      link.download = fileName;
 
       link.click();
     },
