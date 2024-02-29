@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "vite",
-    "build": "webpack --mode=development",
+    "build": "webpack --mode production",
     "preview": "vite preview"
   },
   "dependencies": {
