@@ -1,11 +1,10 @@
-// webpack.config.js
 const path = require("path");
 const { VueLoaderPlugin } = require("vue-loader");
 
 module.exports = {
   entry: "./src/index.js",
   output: {
-    filename: "bundle.js",
+    filename: "bundle.[contenthash].js",
     path: path.resolve(__dirname, "dist"),
   },
   module: {
@@ -40,4 +39,10 @@ module.exports = {
     ],
   },
   plugins: [new VueLoaderPlugin()],
+  optimization: {
+    minimize: true,
+    splitChunks: {
+      chunks: "all",
+    },
+  },
 };
