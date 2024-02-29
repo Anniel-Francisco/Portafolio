@@ -57,7 +57,7 @@ export default {
         {
           icon: ["fas", "house"],
           name: "Home",
-          route: "/home",
+          route: "/",
         },
         {
           icon: ["fas", "folder"],
@@ -83,7 +83,7 @@ export default {
     };
   },
   mounted() {
-    this.$router.push({ path: "/home" });
+    // this.$router.push({ name: "home" });
   },
   methods: {
     goToPage(route) {
