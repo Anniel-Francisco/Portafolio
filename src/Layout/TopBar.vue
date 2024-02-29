@@ -82,9 +82,7 @@ export default {
       ],
     };
   },
-  mounted() {
-    // this.$router.push({ name: "home" });
-  },
+
   methods: {
     goToPage(route) {
       this.$router.push({ path: route });
