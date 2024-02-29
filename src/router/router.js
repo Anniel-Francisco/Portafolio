@@ -34,8 +34,12 @@ const routes = [
   },
 ];
 
+const isNodeEnv = typeof process !== "undefined";
+
 const router = createRouter({
-  history: createWebHistory(process.env.BASE_URL),
+  history: isNodeEnv
+    ? createWebHistory(process.env.BASE_URL)
+    : createWebHistory(),
   routes,
 });
 
