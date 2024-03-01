@@ -1,0 +1,20 @@
+
+.projects[data-v-a9ab0470] {
+  width: 100%;
+  height: 100vh;
+}
+.swiper-content[data-v-a9ab0470] {
+  height: 90%;
+  width: 100%;
+}
+.element-swiper[data-v-a9ab0470] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 768px) {
+.projects[data-v-a9ab0470] {
+    height: calc(100vh - 70px);
+}
+}
+
