@@ -1,12 +1,12 @@
 import { createRouter, createWebHistory } from "vue-router";
-import TopBar from "../Layout/TopBar.vue";
+import TopBar from "../layout/TopBar.vue";
 const routes = [
   {
     path: "/",
     component: TopBar,
     children: [
       {
-        path: "/",
+        path: "",
         name: "home",
         component: () => import("/src/pages/Home.vue"),
       },

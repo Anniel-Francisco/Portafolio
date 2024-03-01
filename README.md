@@ -1,14 +1,15 @@
-# Portafolio
+# 🚀 Welcome to your new awesome project!
 
+This project has been created using **webpack-cli**, you can now run
 
-## Install the dependencies
-
-```sh
-npm install
+```
+npm run build
 ```
 
-### Run app
+or
 
-```sh
-npm run dev
 ```
+yarn build
+```
+
+to bundle your application
