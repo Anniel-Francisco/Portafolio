@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from "vue-router";
-import TopBar from "../layout/TopBar.vue";
+import TopBar from "../layouts/TopBar.vue";
 const routes = [
   {
     path: "/",

@@ -1,4 +1,3 @@
-console.log("Hello World!");
 import "./style.css";
 import "animate.css";
 import "swiper/css";

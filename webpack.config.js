@@ -50,13 +50,6 @@ const config = {
       // Learn more about loaders from https://webpack.js.org/loaders/
     ],
   },
-  resolve: {
-    extensions: [".js", ".vue"],
-    alias: {
-      vue$: "vue/dist/vue.esm.js",
-    },
-    modules: [path.resolve(__dirname, "src"), "node_modules"],
-  },
 };
 
 module.exports = () => {
