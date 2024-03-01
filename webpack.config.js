@@ -21,7 +21,9 @@ const config = {
     new HtmlWebpackPlugin({
       template: "index.html",
     }),
-    new MiniCssExtractPlugin(),
+    new MiniCssExtractPlugin({
+      filename: isProduction ? "[name].[contenthash].css" : "[name].css",
+    }),
     new VueLoaderPlugin(),
 
     // Add your plugins here
