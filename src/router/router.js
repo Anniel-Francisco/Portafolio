@@ -6,7 +6,7 @@ const routes = [
     component: TopBar,
     children: [
       {
-        path: "",
+        path: "/",
         name: "home",
         component: () => import("/src/pages/Home.vue"),
       },
