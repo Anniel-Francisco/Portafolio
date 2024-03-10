@@ -14,12 +14,12 @@
           />
         </div>
         <div class="text-center font-medium">
-          {{ file.name }}
+          {{ file.label }}
         </div>
         <div class="mt-3">
           <button
             class="btn__download bg-red-700 text-white font-semibold uppercase text-center w-full"
-            @click="downloadPDF(file.file, file.name)"
+            @click="downloadFile(file.file, file.name)"
           >
             Download
           </button>
@@ -36,43 +36,35 @@ export default {
     return {
       files: [
         {
-          name: "Resume(Spanish)",
+          label: "Resume(Spanish)",
+          name: "Currículum Vitae.pdf",
           file: "/src/assets/pdfs/Currículum Vitae.pdf",
         },
         {
-          name: "Resume(English)",
+          label: "Resume(English)",
+          name: "Resume.pdf",
           file: "/src/assets/pdfs/Resume.pdf",
         },
       ],
     };
   },
   methods: {
-    async downloadPDF(fileUrl, fileName) {
-      try {
-        const response = await fetch(fileUrl);
-
-        if (!response.ok) {
-          throw new Error(
-            `Error al descargar el archivo: ${response.statusText}`
-          );
-        }
-
-        const blob = await response.blob();
-
-        const blobUrl = window.URL.createObjectURL(blob);
-
-        const link = document.createElement("a");
-        link.href = blobUrl;
-        link.download = fileName;
-
-        document.body.appendChild(link);
-        link.click();
-
-        document.body.removeChild(link);
-        window.URL.revokeObjectURL(blobUrl);
-      } catch (error) {
-        console.error(error);
-      }
+    async downloadFile(fileUrl, fileName) {
+      fetch(fileUrl, {
+        method: "get",
+        mode: "no-cors",
+        referrerPolicy: "no-referrer",
+      })
+        .then((res) => res.blob())
+        .then((res) => {
+          const aElement = document.createElement("a");
+          aElement.setAttribute("download", fileName);
+          const href = URL.createObjectURL(res);
+          aElement.href = href;
+          aElement.setAttribute("target", "_blank");
+          aElement.click();
+          URL.revokeObjectURL(href);
+        });
     },
   },
 };
