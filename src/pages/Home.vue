@@ -8,7 +8,7 @@
         </div>
         <div class="mt-5 mb-5">
           <p class="text-xl text-justify max-md:text-2xl">
-            I'm studying at the Technological Institute of the Americas(ITLA).
+            I'm studying at the Technological Institute of the Americas (ITLA).
             I'm 19 years old. I am passionate about programming. I can work in a
             team, in addition, I am organized and responsible. I enjoy learning
             everything related to this area, so my goal is a challenging and
