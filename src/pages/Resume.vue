@@ -47,13 +47,24 @@ export default {
     };
   },
   methods: {
-    downloadPDF(fileUrl, fileName) {
-      const link = document.createElement("a");
-      link.href = fileUrl;
-      link.target = "_blank";
-      link.download = fileName;
+    async downloadPDF(fileUrl, fileName) {
+      try {
+        const response = await fetch(fileUrl);
+        const blob = await response;
+        const blobUrl = window.URL.createObjectURL(blob);
 
-      link.click();
+        const link = document.createElement("a");
+        link.href = blobUrl;
+        link.download = fileName;
+
+        document.body.appendChild(link);
+        link.click();
+
+        document.body.removeChild(link);
+        window.URL.revokeObjectURL(blobUrl);
+      } catch (error) {
+        console.error("Error al descargar el archivo:", error);
+      }
     },
   },
 };
