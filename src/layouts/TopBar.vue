@@ -5,7 +5,7 @@
       <div class="topbar__left flex items-center">
         <img
           class="w-14 cursor-pointer"
-          @click="goToPage('/home')"
+          @click="goToPage('/')"
           src="../assets/programmer.png"
           alt=""
         />
