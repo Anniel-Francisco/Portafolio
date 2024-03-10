@@ -16,7 +16,9 @@
         :key="index"
       >
         <div class="content">
-          <h2 class="text-5xl font-bold text-center">{{ project.name }}</h2>
+          <h2 class="md:text-5xl max-md:text-2xl font-bold text-center">
+            {{ project.name }}
+          </h2>
           <div class="flex justify-center mt-2">
             <a target="_blank" title="Click" :href="project.route">
               <font-awesome-icon :icon="['fas', 'globe']" size="2xl" />
