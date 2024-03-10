@@ -50,7 +50,15 @@ export default {
     async downloadPDF(fileUrl, fileName) {
       try {
         const response = await fetch(fileUrl);
-        const blob = await response;
+
+        if (!response.ok) {
+          throw new Error(
+            `Error al descargar el archivo: ${response.statusText}`
+          );
+        }
+
+        const blob = await response.blob();
+
         const blobUrl = window.URL.createObjectURL(blob);
 
         const link = document.createElement("a");
@@ -63,7 +71,7 @@ export default {
         document.body.removeChild(link);
         window.URL.revokeObjectURL(blobUrl);
       } catch (error) {
-        console.error("Error al descargar el archivo:", error);
+        console.error(error);
       }
     },
   },

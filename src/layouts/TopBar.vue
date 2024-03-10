@@ -89,9 +89,12 @@ export default {
   methods: {
     goToPage(route) {
       this.$router.push({ path: route });
-      const list = document.querySelector(".list");
-      list.style.display = "none";
-      this.device = false;
+      const width = window.innerWidth;
+      if (width <= 768) {
+        const list = document.querySelector(".list");
+        list.style.display = "none";
+        this.device = false;
+      }
     },
 
     showMenu() {
@@ -131,7 +134,7 @@ export default {
     justify-content: center;
     flex-direction: column;
     align-items: center;
-
+    width: 100%;
     height: calc(100vh - 70px);
   }
   .content {
