@@ -1,6 +1,8 @@
 <template>
   <div class="content mr-auto ml-auto max-w-full">
-    <div class="topbar sticky top-0 bg-white flex items-center justify-between">
+    <div
+      class="topbar sticky top-0 bg-white z-10 flex items-center justify-between"
+    >
       <!-- TopBar Left -->
       <div class="topbar__left flex items-center">
         <img
@@ -19,14 +21,14 @@
           @click="showMenu"
           :icon="['fas', 'bars']"
         />
-        <ul class="list flex max-md:flex-col list-none items-center">
+        <ul class="list md:flex max-md:flex-col list-none items-center">
           <li
             v-for="(item, index) of routes"
             @click="goToPage(item.route)"
             :class="
               $route.path === item.route ? 'bg-green-300' : 'bg-transparent'
             "
-            class="mr-5 flex p-2 rounded-lg font-semibold hover:bg-green-300 items-center last:m-0 cursor-pointer"
+            class="md:mr-5 flex p-2 max-md:pl-5 md:rounded-lg font-semibold hover:bg-green-300 items-center last:m-0 cursor-pointer"
             :key="index"
           >
             <font-awesome-icon
@@ -53,6 +55,7 @@ export default {
   name: "TopBar",
   data() {
     return {
+      device: false,
       routes: [
         {
           icon: ["fas", "house"],
@@ -90,7 +93,13 @@ export default {
 
     showMenu() {
       const list = document.querySelector(".list");
-      list.style.display = "flex";
+      if (!this.device) {
+        list.style.display = "block";
+        this.device = true;
+      } else {
+        list.style.display = "none";
+        this.device = false;
+      }
     },
   },
 };
@@ -98,11 +107,18 @@ export default {
 
 <style scoped>
 .content {
-  width: 90%;
+  width: 100%;
 }
 .topbar {
   height: 70px;
   width: 100%;
+  padding: 0 10px;
+}
+
+.main__content {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @media (min-width: 768px) {
@@ -125,6 +141,11 @@ export default {
 @media (max-width: 768px) {
   .list {
     display: none;
+    position: absolute;
+    left: 0;
+    top: 68px;
+    background: white;
+    width: 100%;
   }
 }
 </style>
