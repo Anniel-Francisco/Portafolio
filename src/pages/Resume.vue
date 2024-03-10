@@ -50,28 +50,21 @@ export default {
   },
   methods: {
     async downloadFile(fileUrl, fileName) {
-      try {
-        const response = await fetch(fileUrl);
-        const blob = await response.blob();
-
-        const aElement = document.createElement("a");
-        aElement.href = URL.createObjectURL(blob);
-        aElement.download = fileName;
-
-        // Append the anchor element to the document body
-        document.body.appendChild(aElement);
-
-        // Trigger a click on the anchor element to start the download
-        aElement.click();
-
-        // Remove the anchor element from the document body
-        document.body.removeChild(aElement);
-
-        // Revoke the object URL to free up resources
-        URL.revokeObjectURL(aElement.href);
-      } catch (error) {
-        console.error("Error downloading file:", error);
-      }
+      fetch(fileUrl, {
+        method: "get",
+        mode: "no-cors",
+        referrerPolicy: "no-referrer",
+      })
+        .then((res) => res.blob())
+        .then((res) => {
+          const aElement = document.createElement("a");
+          aElement.setAttribute("download", fileName);
+          const href = URL.createObjectURL(res);
+          aElement.href = href;
+          aElement.setAttribute("target", "_blank");
+          aElement.click();
+          URL.revokeObjectURL(href);
+        });
     },
   },
 };
