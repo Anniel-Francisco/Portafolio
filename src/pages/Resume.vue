@@ -50,21 +50,24 @@ export default {
   },
   methods: {
     async downloadFile(fileUrl, fileName) {
-      fetch(fileUrl, {
-        method: "get",
-        mode: "no-cors",
-        referrerPolicy: "no-referrer",
-      })
-        .then((res) => res.blob())
-        .then((res) => {
-          const aElement = document.createElement("a");
-          aElement.setAttribute("download", fileName);
-          const href = URL.createObjectURL(res);
-          aElement.href = href;
-          aElement.setAttribute("target", "_blank");
-          aElement.click();
-          URL.revokeObjectURL(href);
+      try {
+        const res = await fetch(fileUrl, {
+          method: "get",
+          mode: "no-cors",
+          referrerPolicy: "no-referrer",
         });
+
+        const blob = await res.blob();
+
+        const aElement = document.createElement("a");
+        aElement.href = URL.createObjectURL(blob);
+        aElement.download = fileName;
+        document.body.appendChild(aElement);
+        aElement.click();
+        document.body.removeChild(aElement);
+      } catch (error) {
+        console.error("Error downloading file:", error);
+      }
     },
   },
 };
