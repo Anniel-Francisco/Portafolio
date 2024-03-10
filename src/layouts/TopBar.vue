@@ -91,10 +91,12 @@ export default {
       this.$router.push({ path: route });
       const list = document.querySelector(".list");
       list.style.display = "none";
+      this.device = false;
     },
 
     showMenu() {
       const list = document.querySelector(".list");
+
       if (!this.device) {
         list.style.display = "block";
         this.device = true;
