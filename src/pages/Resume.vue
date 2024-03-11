@@ -38,12 +38,12 @@ export default {
         {
           label: "Resume(Spanish)",
           name: "Currículum Vitae.pdf",
-          file: "/src/assets/pdfs/Currículum Vitae.pdf",
+          file: "/src/assets/pdf/Currículum Vitae.pdf",
         },
         {
           label: "Resume(English)",
           name: "Resume.pdf",
-          file: "/src/assets/pdfs/Resume.pdf",
+          file: "/src/assets/pdf/Resume.pdf",
         },
       ],
     };
