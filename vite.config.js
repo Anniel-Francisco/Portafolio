@@ -16,8 +16,6 @@ export default defineConfig({
       port: isDev ? 3000 : 8080,
     },
     build: {
-      chunkFileNames: isDev ? "[name].js" : "assets/[name].js",
-      assetFileNames: isDev ? "[name].[ext]" : "assets/[name].[ext]",
       minify: !isDev,
     },
   },

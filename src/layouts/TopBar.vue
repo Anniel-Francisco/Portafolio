@@ -17,7 +17,7 @@
       <div class="topbar__right">
         <font-awesome-icon
           size="2xl"
-          class="bars"
+          class="bars cursor-pointer"
           @click="showMenu"
           :icon="['fas', 'bars']"
         />
@@ -119,7 +119,6 @@ export default {
 .topbar {
   height: 70px;
   width: 100%;
-  padding: 0 10px;
 }
 
 .main__content {
@@ -153,6 +152,10 @@ export default {
     top: 68px;
     background: white;
     width: 100%;
+  }
+
+  .topbar {
+    padding: 0 10px;
   }
 }
 </style>
