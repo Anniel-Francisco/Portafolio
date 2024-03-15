@@ -8,15 +8,12 @@ const isDev = process.env.NODE_ENV === "development";
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [vue()],
+  build: {
+    assetsInlineLimit: 0,
+  },
   resolve: {
     alias: {
       "@": fileURLToPath(new URL("./src", import.meta.url)),
-    },
-    server: {
-      port: isDev ? 3000 : 8080,
-    },
-    build: {
-      minify: !isDev,
     },
   },
 });

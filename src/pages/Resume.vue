@@ -9,7 +9,7 @@
         <div>
           <img
             class="pdf__icon ml-auto mr-auto"
-            src="/src/assets/pdf-icon.png"
+            src="../assets/pdf-icon.png"
             alt=""
           />
         </div>
@@ -17,18 +17,17 @@
           {{ file.label }}
         </div>
         <div class="mt-3">
-          <button
-            class="btn__download bg-red-700 text-white font-semibold uppercase text-center w-full"
-            @click="downloadFile(file.file, file.name)"
+          <a
+            class="block cursor-pointer bg-red-700 text-white font-semibold uppercase text-center w-full"
+            @click="downloadFile(file)"
           >
             Download
-          </button>
+          </a>
         </div>
       </li>
     </ul>
   </div>
 </template>
-
 <script>
 export default {
   name: "Resume",
@@ -38,33 +37,19 @@ export default {
         {
           label: "Resume(Spanish)",
           name: "Currículum Vitae.pdf",
-          file: "/src/assets/pdf/Currículum Vitae.pdf",
+          file: "Currículum Vitae.pdf",
         },
         {
           label: "Resume(English)",
           name: "Resume.pdf",
-          file: "/src/assets/pdf/Resume.pdf",
+          file: "Resume.pdf",
         },
       ],
     };
   },
   methods: {
-    async downloadFile(fileUrl, fileName) {
-      fetch(fileUrl, {
-        method: "get",
-        mode: "no-cors",
-        referrerPolicy: "no-referrer",
-      })
-        .then((res) => res.blob())
-        .then((res) => {
-          const aElement = document.createElement("a");
-          aElement.setAttribute("download", fileName);
-          const href = URL.createObjectURL(res);
-          aElement.href = href;
-          aElement.setAttribute("target", "_blank");
-          aElement.click();
-          URL.revokeObjectURL(href);
-        });
+    downloadFile(file) {
+      window.open(file.file, "_blank");
     },
   },
 };

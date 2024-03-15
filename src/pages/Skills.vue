@@ -14,8 +14,18 @@
           :icon="skill.icon"
           size="2xl"
         />
-
-        <img v-if="skill.img" :src="skill.img" class="w-8 mr-3" />
+        <!-- Tailwind Icon -->
+        <img
+          v-if="skill.name === 'TAILWIND CSS'"
+          src="../assets/tailwind-css-icon.png"
+          class="w-8 mr-3"
+        />
+        <!-- Quasar Icon -->
+        <img
+          v-else-if="skill.name === 'QUASAR FRAMEWORK'"
+          src="../assets/quasar-framework-icon.png"
+          class="w-8 mr-3"
+        />
         <span class="font-semibold text-xl uppercase text-black">
           {{ skill.name }}
         </span>
@@ -41,12 +51,12 @@ export default {
         {
           name: "QUASAR FRAMEWORK",
           icon: [],
-          img: "/src/assets/quasar-framework-icon.png",
+          img: true,
         },
         {
           name: "TAILWIND CSS",
           icon: [],
-          img: "/src/assets/tailwind-css-icon.png",
+          img: true,
         },
       ],
     };
