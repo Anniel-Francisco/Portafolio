@@ -18,8 +18,9 @@
         </div>
         <div class="mt-3">
           <a
+            :href="file.file"
+            download
             class="block cursor-pointer bg-red-700 text-white font-semibold uppercase text-center w-full"
-            @click="downloadFile(file)"
           >
             Download
           </a>
@@ -47,11 +48,7 @@ export default {
       ],
     };
   },
-  methods: {
-    downloadFile(file) {
-      window.open(file.file, "_blank");
-    },
-  },
+  methods: {},
 };
 </script>
 
