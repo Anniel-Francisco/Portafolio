@@ -1,9 +1,8 @@
-import { createRouter, createWebHistory } from "vue-router";
-import TopBar from "../layouts/TopBar.vue";
+import { createMemoryHistory, createRouter } from "vue-router";
 const routes = [
   {
     path: "/",
-    component: TopBar,
+    component: () => import("../layouts/TopBar.vue"),
     children: [
       {
         path: "/",
@@ -35,8 +34,7 @@ const routes = [
 ];
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createMemoryHistory(),
   routes,
 });
-
 export default router;
