@@ -20,6 +20,7 @@
           <a
             :href="file.file"
             download
+            target="_blank"
             class="block cursor-pointer bg-red-700 text-white font-semibold uppercase text-center w-full"
           >
             Download
@@ -38,12 +39,12 @@ export default {
         {
           label: "Resume(Spanish)",
           name: "Currículum Vitae.pdf",
-          file: "Currículum Vitae.pdf",
+          file: "/Currículum Vitae.pdf",
         },
         {
           label: "Resume(English)",
           name: "Resume.pdf",
-          file: "Resume.pdf",
+          file: "/Resume.pdf",
         },
       ],
     };
