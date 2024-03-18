@@ -1,10 +1,10 @@
-# 🚀 Welcome to your new awesome project!
+# Install the dependencies
 
-This project has been created using **webpack-cli**, you can now run
+```shell script
+npm install
+``` 
 
+# Run this app
+```shell script
+npm run dev
 ```
-npm run build
-```
-
-
-to bundle your application
