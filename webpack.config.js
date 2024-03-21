@@ -14,9 +14,9 @@ module.exports = {
   optimization: {
     minimizer: [new TerserPlugin()],
   },
-  devServer: {
-    historyApiFallback: true,
-  },
+  // devServer: {
+  //   historyApiFallback: true,
+  // },
   module: {
     rules: [
       {
