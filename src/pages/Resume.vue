@@ -39,12 +39,12 @@ export default {
         {
           label: "Resume(Spanish)",
           name: "Currículum Vitae.pdf",
-          file: "Currículum Vitae.pdf",
+          file: "../../public/Currículum Vitae.pdf",
         },
         {
           label: "Resume(English)",
           name: "Resume.pdf",
-          file: "Resume.pdf",
+          file: "../../public/Resume.pdf",
         },
       ],
     };

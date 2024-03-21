@@ -4,13 +4,16 @@
       :slides-per-view="1"
       :modules="modules"
       :space-between="5"
-      effect="autoplay"
       navigation
+      autoplay
       :pagination="{ clickable: true }"
       :scrollbar="{ draggable: true }"
       class="swiper-content flex rounded-xl justify-center items-center"
     >
       <swiper-slide
+        :style="{
+          backgroundImage: `url('${project.background}')`,
+        }"
         class="element-swiper rounded-xl bg-slate-300 uppercase"
         v-for="(project, index) in projects"
         :key="index"
@@ -19,11 +22,15 @@
           <h2 class="md:text-5xl max-md:text-2xl font-bold text-center">
             {{ project.name }}
           </h2>
-          <div class="flex justify-center mt-2">
+          <span class="flex justify-center mt-2">
             <a target="_blank" title="Click" :href="project.route">
-              <font-awesome-icon :icon="['fas', 'globe']" size="2xl" />
+              <font-awesome-icon
+                class="text-white"
+                :icon="['fas', 'globe']"
+                size="2xl"
+              />
             </a>
-          </div>
+          </span>
         </div>
       </swiper-slide>
     </swiper>
@@ -47,21 +54,19 @@ export default {
       modules: [Navigation, Pagination, Scrollbar, A11y, Autoplay],
       projects: [
         {
-          name: "gym to do list",
-          route: "https://github.com/Anniel-Francisco/CRUD-GYM.git",
+          name: "GYM TO DO LIST",
+          route: "https://afrj-to-do-list-gym.netlify.app/",
+          background: "./src/assets/to-do-list.png",
         },
         {
           name: "CALCULATOR",
-          route:
-            "https://github.com/Anniel-Francisco/Tarea_2_Calculadora_Web.git",
+          route: "https://afrj-calculator.netlify.app/",
+          background: "./src/assets/calculator.png",
         },
         {
           name: "API-VALORANT",
-          route: "https://github.com/Anniel-Francisco/API-VALORANT.git",
-        },
-        {
-          name: "Muro Interactivo",
-          route: "https://github.com/Anniel-Francisco/Muro_Interactivo.git",
+          route: "https://afrj-api-valorant.netlify.app/#/",
+          background: "./src/assets/api-valorant.png",
         },
       ],
     };
@@ -84,8 +89,23 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-size: cover;
+  position: relative;
 }
 
+.content h2 {
+  color: white;
+}
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+}
 @media (min-width: 768px) {
   .projects {
     height: calc(100vh - 70px);
