@@ -88,9 +88,7 @@ export default {
 
   methods: {
     goToPage(route) {
-      const list = document.querySelector(".list");
       this.$router.push({ path: route });
-      list.style.display = "none";
       this.device = false;
     },
 
