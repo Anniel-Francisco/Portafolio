@@ -56,17 +56,17 @@ export default {
         {
           name: "GYM TO DO LIST",
           route: "https://afrj-to-do-list-gym.netlify.app/",
-          background: "../assets/to-do-list.png",
+          background: "src/assets/to-do-list.png",
         },
         {
           name: "CALCULATOR",
           route: "https://afrj-calculator.netlify.app/",
-          background: "../assets/calculator.png",
+          background: "src/assets/calculator.png",
         },
         {
           name: "API-VALORANT",
           route: "https://afrj-api-valorant.netlify.app/#/",
-          background: "../assets/api-valorant.png",
+          background: "src/assets/api-valorant.png",
         },
       ],
     };
