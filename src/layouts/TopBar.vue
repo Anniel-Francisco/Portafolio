@@ -89,7 +89,9 @@ export default {
   methods: {
     goToPage(route) {
       this.$router.push({ path: route });
-      this.device = false;
+      if (window.innerWidth <= 768) {
+        this.closeMenu();
+      }
     },
 
     showMenu() {
@@ -99,9 +101,13 @@ export default {
         list.style.display = "block";
         this.device = true;
       } else {
-        list.style.display = "none";
-        this.device = false;
+        this.closeMenu();
       }
+    },
+    closeMenu() {
+      const list = document.querySelector(".list");
+      list.style.display = "none";
+      this.device = false;
     },
   },
 };
