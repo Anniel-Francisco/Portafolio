@@ -89,12 +89,6 @@ export default {
   methods: {
     goToPage(route) {
       this.$router.push({ path: route });
-      const width = window.innerWidth;
-      if (width <= 768) {
-        const list = document.querySelector(".list");
-        list.style.display = "none";
-        this.device = false;
-      }
     },
 
     showMenu() {

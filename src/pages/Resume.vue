@@ -40,13 +40,11 @@ export default {
           label: "Resume(Spanish)",
           name: "Currículum Vitae.pdf",
           localFile: "Currículum Vitae.pdf",
-          // publicFile: `${process.env.PUBLIC_URL}/currículum vitae.pdf.pdf`,
         },
         {
           label: "Resume(English)",
           name: "Resume.pdf",
           localFile: "Resume.pdf",
-          // publicFile: `${process.env.PUBLIC_URL}/resume.pdf`,
         },
       ],
     };

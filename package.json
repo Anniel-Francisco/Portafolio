@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "set NODE_ENV=development && vite",
-    "build": "cross-env NODE_ENV=production vite build"
+    "dev": "set NODE_ENV=development && vite && --mode development",
+    "build": "cross-env NODE_ENV=production vite build --mode production"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.5.1",
