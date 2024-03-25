@@ -89,6 +89,7 @@ export default {
   methods: {
     goToPage(route) {
       this.$router.push({ path: route });
+      this.device = false;
     },
 
     showMenu() {
