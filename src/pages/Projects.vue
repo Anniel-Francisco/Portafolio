@@ -46,6 +46,11 @@ import {
   A11y,
 } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/vue";
+//
+import toDoListBackground from "@/assets/to-do-list.png";
+import calculatorBackground from "@/assets/calculator.png";
+import apiValorantBackground from "@/assets/api-valorant.png";
+
 export default {
   name: "Projects",
   components: { Swiper, SwiperSlide },
@@ -56,17 +61,17 @@ export default {
         {
           name: "GYM TO DO LIST",
           route: "https://afrj-to-do-list-gym.netlify.app/",
-          background: "src/assets/to-do-list.png",
+          background: toDoListBackground,
         },
         {
           name: "CALCULATOR",
           route: "https://afrj-calculator.netlify.app/",
-          background: "src/assets/calculator.png",
+          background: calculatorBackground,
         },
         {
           name: "API-VALORANT",
           route: "https://afrj-api-valorant.netlify.app/#/",
-          background: "src/assets/api-valorant.png",
+          background: apiValorantBackground,
         },
       ],
     };
