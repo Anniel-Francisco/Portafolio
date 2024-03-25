@@ -18,7 +18,11 @@
         </div>
         <div class="mt-3">
           <a
-            :href="file.file"
+            :href="
+              process.env.NODE_ENV === 'development'
+                ? file.localFile
+                : file.publicFile
+            "
             download
             target="_blank"
             class="block cursor-pointer bg-red-700 text-white font-semibold uppercase text-center w-full"
@@ -39,12 +43,14 @@ export default {
         {
           label: "Resume(Spanish)",
           name: "Currículum Vitae.pdf",
-          file: "../../public/Currículum Vitae.pdf",
+          localFile: "../../public/Currículum Vitae.pdf",
+          publicFile: `${process.env.PUBLIC_URL}/currículum vitae.pdf.pdf`,
         },
         {
           label: "Resume(English)",
           name: "Resume.pdf",
-          file: "../../public/Resume.pdf",
+          localFile: "../../public/Resume.pdf",
+          publicFile: `${process.env.PUBLIC_URL}/resume.pdf`,
         },
       ],
     };
