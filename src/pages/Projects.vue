@@ -12,7 +12,7 @@
     >
       <swiper-slide
         :style="{
-          backgroundImage: `url('${project.background}')`,
+          backgroundImage: `url(${project.background})`,
         }"
         class="element-swiper rounded-xl bg-slate-300 uppercase"
         v-for="(project, index) in projects"
