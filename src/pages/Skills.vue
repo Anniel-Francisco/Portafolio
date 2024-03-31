@@ -16,14 +16,20 @@
         />
         <!-- Tailwind Icon -->
         <img
-          v-if="skill.name === 'TAILWIND CSS'"
+          v-if="skill?.name === 'TAILWIND CSS' && skill.img"
           src="../assets/tailwind-css-icon.png"
           class="w-8 mr-3"
         />
         <!-- Quasar Icon -->
         <img
-          v-else-if="skill.name === 'QUASAR FRAMEWORK'"
+          v-else-if="skill?.name === 'QUASAR FRAMEWORK' && skill.img"
           src="../assets/quasar-framework-icon.png"
+          class="w-8 mr-3"
+        />
+        <!-- Typescript Icon -->
+        <img
+          v-else-if="skill?.name === 'TYPESCRIPT' && skill.img"
+          src="../assets/typescript-icon.png"
           class="w-8 mr-3"
         />
         <span class="font-semibold text-xl uppercase text-black">
@@ -43,11 +49,12 @@ export default {
         { name: "HTML5", icon: ["fab", "html5"] },
         { name: "CSS3", icon: ["fab", "css3-alt"] },
         { name: "JAVASCRIPT", icon: ["fab", "js"] },
-        { name: "SQL", icon: ["fas", "database"] },
+        { name: "SQL SERVER", icon: ["fas", "database"] },
         { name: "GIT", icon: ["fab", "git-alt"] },
         { name: "GITHUB", icon: ["fab", "github"] },
         { name: "REACT.JS", icon: ["fab", "react"] },
         { name: "VUE.JS", icon: ["fab", "vuejs"] },
+        { name: "TYPESCRIPT", icon: [], img: true },
         {
           name: "QUASAR FRAMEWORK",
           icon: [],

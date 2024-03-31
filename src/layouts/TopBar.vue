@@ -6,7 +6,7 @@
       <!-- TopBar Left -->
       <div class="topbar__left flex items-center">
         <img
-          class="w-14 cursor-pointer"
+          class="w-14 cursor-pointer hover:-translate-y-1 duration-300"
           @click="goToPage('/')"
           src="../assets/programmer.png"
           alt=""
