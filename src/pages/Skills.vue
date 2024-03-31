@@ -16,19 +16,19 @@
         />
         <!-- Tailwind Icon -->
         <img
-          v-if="skill?.name === 'TAILWIND CSS' && skill.img"
+          v-if="skill.name === 'TAILWIND CSS' && skill.img"
           src="../assets/tailwind-css-icon.png"
           class="w-8 mr-3"
         />
         <!-- Quasar Icon -->
         <img
-          v-else-if="skill?.name === 'QUASAR FRAMEWORK' && skill.img"
+          v-else-if="skill.name === 'QUASAR FRAMEWORK' && skill.img"
           src="../assets/quasar-framework-icon.png"
           class="w-8 mr-3"
         />
         <!-- Typescript Icon -->
         <img
-          v-else-if="skill?.name === 'TYPESCRIPT' && skill.img"
+          v-else-if="skill.name === 'TYPESCRIPT' && skill.img"
           src="../assets/typescript-icon.png"
           class="w-8 mr-3"
         />
