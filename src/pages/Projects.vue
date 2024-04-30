@@ -105,7 +105,7 @@ export default {
             {
               name: "URL",
               icon: ["fas", "link"],
-              url: "https://afrj-api-valorant.netlify.app/#/",
+              url: "#",
             },
           ],
           description:
