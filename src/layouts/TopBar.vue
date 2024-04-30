@@ -114,29 +114,12 @@ export default {
 </script>
 
 <style scoped>
-.content {
-  width: 100%;
-}
 .topbar {
   height: 70px;
   width: 100%;
 }
 
-.main__content {
-  width: 90%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 @media (min-width: 768px) {
-  .main__content {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    height: calc(100vh - 70px);
-  }
   .content {
     width: 80%;
   }
@@ -156,7 +139,10 @@ export default {
   }
 
   .topbar {
-    padding: 0 10px;
+    padding: 0 15px;
+  }
+  .main__content {
+    padding: 0 15px;
   }
 }
 </style>

@@ -1,33 +1,31 @@
 <template>
-  <div class="content__contact pt-5">
-    <div class="grid gap-5 grid-cols-3 max-md:pb-5 max-md:grid-cols-1">
-      <div
-        class="duration-300 rounded-lg border border-solid border-black flex flex-col justify-center items-start p-5"
-        v-for="(contact, index) of data"
-        :key="index"
-      >
-        <div class="flex items-center">
-          <font-awesome-icon
-            class="mr-1"
-            :icon="contact.icon"
-            style="color: black"
-          />
-          <span class="font-semibold">{{ contact.key }}</span>
-        </div>
-        <div>
-          <a
-            class="hover:underline"
-            :href="
-              contact.key == 'Phone' && contact.value
-                ? 'https://wa.me/' + contact.value
-                : contact.key == 'Email' && contact.value
-                ? 'mailto:' + contact.value
-                : contact.value
-            "
-            target="_blank"
-            >{{ contact.label ? contact.label : contact.value }}</a
-          >
-        </div>
+  <div class="grid gap-5 pt-2 grid-cols-3 max-md:grid-cols-1 pb-5">
+    <div
+      class="duration-300 rounded-lg border border-solid border-black flex flex-col justify-center items-start p-5"
+      v-for="(contact, index) of data"
+      :key="index"
+    >
+      <div class="flex items-center">
+        <font-awesome-icon
+          class="mr-1"
+          :icon="contact.icon"
+          style="color: black"
+        />
+        <span class="font-semibold">{{ contact.key }}</span>
+      </div>
+      <div>
+        <a
+          class="hover:underline"
+          :href="
+            contact.key == 'Phone' && contact.value
+              ? 'https://wa.me/' + contact.value
+              : contact.key == 'Email' && contact.value
+              ? 'mailto:' + contact.value
+              : contact.value
+          "
+          target="_blank"
+          >{{ contact.label ? contact.label : contact.value }}</a
+        >
       </div>
     </div>
   </div>
@@ -64,14 +62,4 @@ export default {
 };
 </script>
 
-<style scoped>
-.content__contact {
-  width: 100%;
-}
-
-@media (min-width: 768px) {
-  .content__contact {
-    height: calc(100vh - 70px);
-  }
-}
-</style>
+<style scoped></style>

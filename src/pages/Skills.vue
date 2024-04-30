@@ -1,41 +1,38 @@
 <template>
-  <div class="skills">
+  <div class="pt-2 w-full pb-5 grid grid-cols-3 max-md:grid-cols-1 gap-5">
     <div
-      class="content__skills max-md:pb-5 grid grid-cols-3 max-md:grid-cols-1 gap-5"
+      class="shadow-lg hover:shadow-green-300 duration-300 flex items-center rounded-lg justify-center bg-green-300"
+      style="padding: 20px 0"
+      v-for="(skill, index) of skills"
+      :key="index"
     >
-      <div
-        class="skill shadow-lg hover:shadow-green-300 duration-300 flex items-center rounded-lg justify-center bg-green-300"
-        v-for="(skill, index) of skills"
-        :key="index"
-      >
-        <font-awesome-icon
-          v-if="skill.icon.length > 0"
-          class="mr-3 text-black"
-          :icon="skill.icon"
-          size="2xl"
-        />
-        <!-- Tailwind Icon -->
-        <img
-          v-if="skill.name === 'TAILWIND CSS' && skill.img"
-          src="../assets/tailwind-css-icon.png"
-          class="w-8 mr-3"
-        />
-        <!-- Quasar Icon -->
-        <img
-          v-else-if="skill.name === 'QUASAR FRAMEWORK' && skill.img"
-          src="../assets/quasar-framework-icon.png"
-          class="w-8 mr-3"
-        />
-        <!-- Typescript Icon -->
-        <img
-          v-else-if="skill.name === 'TYPESCRIPT' && skill.img"
-          src="../assets/typescript-icon.png"
-          class="w-8 mr-3"
-        />
-        <span class="font-semibold text-xl uppercase text-black">
-          {{ skill.name }}
-        </span>
-      </div>
+      <font-awesome-icon
+        v-if="skill.icon.length > 0"
+        class="mr-3 text-black"
+        :icon="skill.icon"
+        size="2xl"
+      />
+      <!-- Tailwind Icon -->
+      <img
+        v-if="skill.name === 'TAILWIND CSS' && skill.img"
+        src="../assets/tailwind-css-icon.png"
+        class="w-8 mr-3"
+      />
+      <!-- Quasar Icon -->
+      <img
+        v-else-if="skill.name === 'QUASAR FRAMEWORK' && skill.img"
+        src="../assets/quasar-framework-icon.png"
+        class="w-8 mr-3"
+      />
+      <!-- Typescript Icon -->
+      <img
+        v-else-if="skill.name === 'TYPESCRIPT' && skill.img"
+        src="../assets/typescript-icon.png"
+        class="w-8 mr-3"
+      />
+      <span class="font-semibold text-xl uppercase text-black">
+        {{ skill.name }}
+      </span>
     </div>
   </div>
 </template>
@@ -70,22 +67,3 @@ export default {
   },
 };
 </script>
-
-<style scoped>
-.skills {
-  width: 100%;
-  height: 100vh;
-}
-.content__skills {
-  padding-top: 20px;
-}
-
-.skill {
-  padding: 20px 0;
-}
-@media (min-width: 768px) {
-  .skills {
-    height: calc(100vh - 70px);
-  }
-}
-</style>

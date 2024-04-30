@@ -1,11 +1,6 @@
 import "./style.css";
 import "animate.css";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/scrollbar";
 import router from "./router/router";
-
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { createApp } from "vue";
@@ -17,7 +12,7 @@ import {
   faFolder,
   faMobile,
   faCode,
-  faGlobe,
+  faLink,
   faEnvelope,
   faDatabase,
   faBars,
@@ -40,7 +35,7 @@ library.add(
   faFolder,
   faMobile,
   faCode,
-  faGlobe,
+  faLink,
   faGithub,
   faLinkedin,
   faEnvelope,

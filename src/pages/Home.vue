@@ -1,5 +1,8 @@
 <template>
-  <div class="flex flex-col justify-evenly items-center home">
+  <div
+    class="flex flex-col justify-evenly items-center max-md:pb-5"
+    style="height: calc(100vh - 70px)"
+  >
     <div class="flex items-center max-md:flex-wrap max-md:pt-5">
       <!-- Description -->
       <div class="w-full">
@@ -22,27 +25,14 @@
       </div>
     </div>
     <!-- Links -->
-    <div class="links flex justify-end items-end max-md:pb-2 w-full">
-      <div class="hover:-translate-y-1 duration-150">
-        <a
-          href="https://github.com/Anniel-Francisco/Portafolio.git"
-          target="_blank"
-        >
-          <font-awesome-icon
-            style="font-size: 25px"
-            :icon="['fab', 'github']"
-          />
-        </a>
-      </div>
-      <div class="hover:-translate-y-1 ml-3 duration-150">
-        <a
-          href="https://www.linkedin.com/in/anniel-francisco-reyes-javier-b22347274/"
-          target="_blank"
-        >
-          <font-awesome-icon
-            style="font-size: 25px"
-            :icon="['fab', 'linkedin']"
-          />
+    <div class="flex justify-end items-end max-md:pb-2 w-full">
+      <div
+        v-for="(link, index) in links"
+        :key="index"
+        class="hover:-translate-y-1 link duration-150"
+      >
+        <a :href="link.link" target="_blank">
+          <font-awesome-icon style="font-size: 25px" :icon="link.icon" />
         </a>
       </div>
     </div>
@@ -56,6 +46,16 @@ export default {
   data() {
     return {
       typed: null,
+      links: [
+        {
+          icon: ["fab", "github"],
+          link: "https://github.com/Anniel-Francisco/Portafolio.git",
+        },
+        {
+          icon: ["fab", "linkedin"],
+          link: "https://www.linkedin.com/in/anniel-francisco-reyes-javier-b22347274/",
+        },
+      ],
     };
   },
   mounted() {
@@ -82,19 +82,13 @@ export default {
 </script>
 
 <style scoped>
-.home {
-  width: 100%;
-}
 .image {
   width: 400px;
 }
-
+.link:first-child {
+  margin-right: 10px;
+}
 @media (min-width: 768px) {
-  .home {
-    display: flex;
-    align-items: center;
-    height: 100%;
-  }
   .image {
     max-width: 100%;
   }
