@@ -28,6 +28,28 @@ export default {
     return {
       projects: [
         {
+          name: "RICK AND MORTY",
+          image: apiRickAndMorty,
+          links: [
+            {
+              name: "GitHub",
+              icon: ["fab", "github"],
+              url: "https://github.com/Anniel-Francisco/RICKANDMORTY-API.git",
+            },
+            {
+              name: "URL",
+              icon: ["fas", "link"],
+              url: "#",
+            },
+          ],
+          description:
+            "Rick and morty cartoon API integration, using characters and locations.",
+          technologies: [
+            { name: "React.js", color: "1082a7", icon: ["fab", "react"] },
+            { name: "TypeScript", color: "377cc8", icon: ["fab", "js"] },
+          ],
+        },
+        {
           name: "TO DO LIST",
           image: toDoListBackground,
           links: [
@@ -90,29 +112,6 @@ export default {
           technologies: [
             { name: "Vue.js", color: "47ba87", icon: ["fab", "vuejs"] },
             { name: "JavaScript", color: "f7e025", icon: ["fab", "js"] },
-          ],
-        },
-
-        {
-          name: "RICK AND MORTY",
-          image: apiRickAndMorty,
-          links: [
-            {
-              name: "GitHub",
-              icon: ["fab", "github"],
-              url: "https://github.com/Anniel-Francisco/RICKANDMORTY-API.git",
-            },
-            {
-              name: "URL",
-              icon: ["fas", "link"],
-              url: "#",
-            },
-          ],
-          description:
-            "Rick and morty cartoon API integration, using characters and locations.",
-          technologies: [
-            { name: "React.js", color: "1082a7", icon: ["fab", "react"] },
-            { name: "TypeScript", color: "377cc8", icon: ["fab", "js"] },
           ],
         },
       ],
