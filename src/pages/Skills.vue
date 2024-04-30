@@ -51,6 +51,7 @@ export default {
         { name: "GITHUB", icon: ["fab", "github"] },
         { name: "REACT.JS", icon: ["fab", "react"] },
         { name: "VUE.JS", icon: ["fab", "vuejs"] },
+        { name: "NODE.JS", icon: ["fab", "node"] },
         { name: "TYPESCRIPT", icon: [], img: true },
         {
           name: "QUASAR FRAMEWORK",
