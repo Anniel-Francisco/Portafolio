@@ -40,7 +40,7 @@
         v-for="(link, index) in links"
         :key="index"
       >
-        <a :href="link.url" target="_blank">
+        <a :href="link.url" target="_blank" style="outline: none">
           <font-awesome-icon :icon="link.icon" size="2xl" />
         </a>
       </span>
