@@ -41,7 +41,7 @@ export default {
               url: "https://github.com/Anniel-Francisco/RICKANDMORTY-API.git",
             },
             {
-              name: "URL",
+              name: "Link",
               icon: ["fas", "link"],
               url: "#",
             },
@@ -66,7 +66,7 @@ export default {
               url: "https://github.com/Anniel-Francisco/TO-DO-LIST.git",
             },
             {
-              name: "URL",
+              name: "Link",
               icon: ["fas", "link"],
               url: "https://afrj-to-do-list-gym.netlify.app/",
             },
@@ -90,7 +90,7 @@ export default {
               url: "https://github.com/Anniel-Francisco/Tarea_2_Calculadora_Web.git",
             },
             {
-              name: "URL",
+              name: "Link",
               icon: ["fas", "link"],
               url: "https://afrj-calculator.netlify.app/",
             },
@@ -114,7 +114,7 @@ export default {
               url: "https://github.com/Anniel-Francisco/API-VALORANT.git",
             },
             {
-              name: "URL",
+              name: "Link",
               icon: ["fas", "link"],
               url: "https://afrj-api-valorant.netlify.app/#/",
             },
@@ -139,7 +139,7 @@ export default {
               url: "https://github.com/Anniel-Francisco/Weather-App.git",
             },
             {
-              name: "URL",
+              name: "Link",
               icon: ["fas", "link"],
               url: "#",
             },

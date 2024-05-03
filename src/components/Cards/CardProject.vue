@@ -9,8 +9,8 @@
       />
     </div>
     <div class="flex flex-col justify-between mt-2">
-      <!-- description -->
-      <div>
+      <!-- name and description -->
+      <div v-if="name && description">
         <h3 class="flex items-center font-bold uppercase">
           <span> {{ name }} - </span>
           <span
@@ -50,6 +50,7 @@
         class="uri hover:-translate-y-1 duration-300"
         v-for="(link, index) in links"
         :key="index"
+        :title="link.name"
       >
         <a :href="link.url" target="_blank" style="outline: none">
           <font-awesome-icon :icon="link.icon" size="2xl" />
