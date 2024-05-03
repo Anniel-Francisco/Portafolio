@@ -73,6 +73,7 @@ export default {
           technologies: [
             { name: "Vue.js", color: "47ba87", icon: ["fab", "vuejs"] },
             { name: "JavaScript", color: "f7e025", icon: ["fab", "js"] },
+            { name: "Tailwind", color: "38bdf8", icon: "si-tailwindcss" },
           ],
         },
         {
