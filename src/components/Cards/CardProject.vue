@@ -39,7 +39,6 @@
             class="mr-1"
             :icon="tech.icon"
             style="color: white"
-            size="md"
             v-else
           />
           {{ tech.name }}

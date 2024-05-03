@@ -29,6 +29,7 @@ export default {
   data() {
     return {
       projects: [
+        // RICK AND MORTY
         {
           name: "RICK AND MORTY",
           image: apiRickAndMorty,
@@ -49,10 +50,11 @@ export default {
             "Rick and morty cartoon API integration, using characters and locations.",
           technologies: [
             { name: "React.js", color: "1082a7", icon: ["fab", "react"] },
-            { name: "TypeScript", color: "377cc8", icon: ["fab", "js"] },
+            { name: "TypeScript", color: "377cc8", icon: "co-typescript" },
             { name: "Tailwind", color: "38bdf8", icon: "si-tailwindcss" },
           ],
         },
+        // TO DO LIST
         {
           name: "TO DO LIST",
           image: toDoListBackground,
@@ -76,6 +78,7 @@ export default {
             { name: "Tailwind", color: "38bdf8", icon: "si-tailwindcss" },
           ],
         },
+        // CALCULATOR
         {
           name: "CALCULATOR",
           image: calculatorBackground,
@@ -99,6 +102,7 @@ export default {
             { name: "JavaScript", color: "f7e025", icon: ["fab", "js"] },
           ],
         },
+        // VALORANT
         {
           name: "VALORANT",
           image: apiValorantBackground,
@@ -123,6 +127,7 @@ export default {
             { name: "Tailwind", color: "38bdf8", icon: "si-tailwindcss" },
           ],
         },
+        // WEATHER APP
         {
           name: "Weather App",
           image: weatherAppImage,
@@ -143,7 +148,7 @@ export default {
             "This app typically displays data such as current temperature, wind speed and humidity.",
           technologies: [
             { name: "React.js", color: "1082a7", icon: ["fab", "react"] },
-            { name: "TypeScript", color: "377cc8", icon: ["fab", "js"] },
+            { name: "TypeScript", color: "377cc8", icon: "co-typescript" },
           ],
         },
       ],
