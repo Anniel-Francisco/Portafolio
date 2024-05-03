@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "set NODE_ENV=development && vite && --mode development",
-    "build": "cross-env NODE_ENV=production vite build --mode production"
+    "dev": "vite",
+    "build": "vite build"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.5.1",
@@ -15,7 +15,6 @@
     "animate.css": "^4.1.1",
     "axios": "^1.6.7",
     "caniuse-lite": "^1.0.30001588",
-    "cross-env": "^7.0.3",
     "swiper": "^10.3.1",
     "typed.js": "^2.0.16",
     "vue": "^3.4.21",

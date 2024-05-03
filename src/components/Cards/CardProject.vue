@@ -8,7 +8,7 @@
         class="rounded-t-sm"
       />
     </div>
-    <div class="flex flex-col justify-between p-2">
+    <div class="flex flex-col justify-between">
       <!-- description -->
       <div class="mt-2">
         <h3 class="font-bold">{{ name }}</h3>
@@ -34,7 +34,7 @@
         </div>
       </div>
     </div>
-    <div v-if="links.length > 0" class="flex justify-center p-2">
+    <div v-if="links.length > 0" class="flex justify-center pt-2 pb-2">
       <span
         class="uri hover:-translate-y-1 duration-300"
         v-for="(link, index) in links"
