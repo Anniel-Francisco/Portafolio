@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col justify-between rounded-sm">
+  <div class="flex flex-col relative justify-between rounded-sm">
     <div>
       <img
         :src="image"
@@ -8,10 +8,20 @@
         class="rounded-t-sm"
       />
     </div>
-    <div class="flex flex-col justify-between">
+    <div class="flex flex-col justify-between mt-2">
       <!-- description -->
-      <div class="mt-2">
-        <h3 class="font-bold">{{ name }}</h3>
+      <div>
+        <h3 class="flex items-center font-bold uppercase">
+          <span> {{ name }} - </span>
+          <span
+            class="p-1 rounded-sm ml-2 font-semibold"
+            :style="{
+              backgroundColor: state === 'developing' ? '#f7e025' : '#55e0a2',
+            }"
+          >
+            {{ state }}
+          </span>
+        </h3>
         <p class="text-base">
           {{ description }}
         </p>
@@ -66,6 +76,10 @@ export default {
     },
     links: {
       type: Array,
+      required: true,
+    },
+    state: {
+      type: String,
       required: true,
     },
     technologies: {

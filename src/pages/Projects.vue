@@ -7,6 +7,7 @@
       :description="project.description"
       :image="project.image"
       :links="project.links"
+      :state="project.state"
       :technologies="project.technologies"
     />
   </div>
@@ -30,6 +31,7 @@ export default {
         {
           name: "RICK AND MORTY",
           image: apiRickAndMorty,
+          state: "developing",
           links: [
             {
               name: "GitHub",
@@ -52,6 +54,7 @@ export default {
         {
           name: "TO DO LIST",
           image: toDoListBackground,
+          state: "done",
           links: [
             {
               name: "GitHub",
@@ -73,6 +76,7 @@ export default {
         {
           name: "CALCULATOR",
           image: calculatorBackground,
+          state: "done",
           links: [
             {
               name: "GitHub",
@@ -95,6 +99,7 @@ export default {
         {
           name: "VALORANT",
           image: apiValorantBackground,
+          state: "done",
           links: [
             {
               name: "GitHub",
