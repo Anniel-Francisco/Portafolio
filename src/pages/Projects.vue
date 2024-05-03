@@ -20,6 +20,7 @@ import toDoListBackground from "@/assets/to-do-list.png";
 import calculatorBackground from "@/assets/calculator.png";
 import apiValorantBackground from "@/assets/api-valorant.png";
 import apiRickAndMorty from "@/assets/rickandmorty-api.png";
+import weatherAppImage from "@/assets/weather-app.png";
 export default {
   name: "Projects",
   components: {
@@ -117,6 +118,29 @@ export default {
           technologies: [
             { name: "Vue.js", color: "47ba87", icon: ["fab", "vuejs"] },
             { name: "JavaScript", color: "f7e025", icon: ["fab", "js"] },
+          ],
+        },
+        {
+          name: "Weather App",
+          image: weatherAppImage,
+          state: "developing",
+          links: [
+            {
+              name: "GitHub",
+              icon: ["fab", "github"],
+              url: "https://github.com/Anniel-Francisco/Weather-App.git",
+            },
+            {
+              name: "URL",
+              icon: ["fas", "link"],
+              url: "#",
+            },
+          ],
+          description:
+            "This app typically displays data such as current temperature, wind speed and humidity.",
+          technologies: [
+            { name: "React.js", color: "1082a7", icon: ["fab", "react"] },
+            { name: "TypeScript", color: "377cc8", icon: ["fab", "js"] },
           ],
         },
       ],
