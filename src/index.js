@@ -5,7 +5,11 @@ import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { createApp } from "vue";
 import App from "./App.vue";
+// Oh Vue Icons
+import { OhVueIcon, addIcons } from "oh-vue-icons";
+import { SiTailwindcss } from "oh-vue-icons/icons";
 
+// FontAwesomeIcons
 import {
   faUser,
   faHouse,
@@ -30,6 +34,7 @@ import {
   faVuejs,
 } from "@fortawesome/free-brands-svg-icons";
 
+addIcons(SiTailwindcss);
 library.add(
   faUser,
   faHouse,
@@ -55,4 +60,5 @@ library.add(
 createApp(App)
   .use(router)
   .component("font-awesome-icon", FontAwesomeIcon)
+  .component("v-icon", OhVueIcon)
   .mount("#app");

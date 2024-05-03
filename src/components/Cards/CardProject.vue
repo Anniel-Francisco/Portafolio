@@ -34,11 +34,13 @@
           :key="index"
           :style="`background-color: #${tech.color}`"
         >
+          <v-icon v-if="typeof tech.icon == 'string'" :name="tech.icon" />
           <font-awesome-icon
             class="mr-1"
             :icon="tech.icon"
             style="color: white"
             size="md"
+            v-else
           />
           {{ tech.name }}
         </div>

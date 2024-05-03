@@ -50,6 +50,7 @@ export default {
           technologies: [
             { name: "React.js", color: "1082a7", icon: ["fab", "react"] },
             { name: "TypeScript", color: "377cc8", icon: ["fab", "js"] },
+            { name: "Tailwind", color: "38bdf8", icon: "si-tailwindcss" },
           ],
         },
         {
@@ -118,6 +119,7 @@ export default {
           technologies: [
             { name: "Vue.js", color: "47ba87", icon: ["fab", "vuejs"] },
             { name: "JavaScript", color: "f7e025", icon: ["fab", "js"] },
+            { name: "Tailwind", color: "38bdf8", icon: "si-tailwindcss" },
           ],
         },
         {
