@@ -146,7 +146,7 @@ export default {
             {
               name: "Link",
               icon: ["fas", "link"],
-              url: "#",
+              url: "https://afrj-weather-app.netlify.app/",
             },
           ],
           description: `This app typically displays data such as current temperature, wind speed and humidity.`,
