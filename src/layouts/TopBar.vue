@@ -142,7 +142,7 @@ export default {
     padding: 0 15px;
   }
   .main__content {
-    padding: 0 15px;
+    padding: 0 15px 15px;
   }
 }
 </style>
