@@ -12,9 +12,9 @@
       <!-- name and description -->
       <div v-if="name && description">
         <h3 class="flex items-center font-bold uppercase">
-          <span> {{ name }} - </span>
+          <span class="mr-1"> {{ name }} - </span>
           <span
-            class="p-1 rounded-sm ml-2 font-semibold"
+            class="p-1 rounded-sm font-semibold"
             :style="{
               backgroundColor: state === 'developing' ? '#f7e025' : '#55e0a2',
             }"
@@ -22,9 +22,7 @@
             {{ state }}
           </span>
         </h3>
-        <p class="text-base">
-          {{ description }}
-        </p>
+        <p class="text-base">{{ description }} <span v-html="html"></span></p>
       </div>
       <!-- technologies  -->
       <div v-if="technologies.length > 0" class="grid grid-cols-3 gap-2 mt-2">
@@ -86,6 +84,10 @@ export default {
     },
     technologies: {
       type: Array,
+      required: true,
+    },
+    html: {
+      type: String,
       required: true,
     },
   },

@@ -7,7 +7,7 @@ import { createApp } from "vue";
 import App from "./App.vue";
 // Oh Vue Icons
 import { OhVueIcon, addIcons } from "oh-vue-icons";
-import { SiTailwindcss, CoTypescript,SiQuasar } from "oh-vue-icons/icons";
+import { SiTailwindcss, CoTypescript, SiQuasar } from "oh-vue-icons/icons";
 
 // FontAwesomeIcons
 import {
@@ -30,11 +30,12 @@ import {
   faNode,
   faGitAlt,
   faJs,
+  faNodeJs,
   faReact,
   faVuejs,
 } from "@fortawesome/free-brands-svg-icons";
 
-addIcons(SiTailwindcss, CoTypescript,SiQuasar);
+addIcons(SiTailwindcss, CoTypescript, SiQuasar);
 library.add(
   faUser,
   faHouse,
@@ -45,6 +46,7 @@ library.add(
   faGithub,
   faLinkedin,
   faEnvelope,
+  faNodeJs,
   faHtml5,
   faNode,
   faCss3Alt,

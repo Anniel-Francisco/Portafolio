@@ -1,5 +1,5 @@
 <template>
-  <div class="pt-2 w-full pb-5 grid grid-cols-3 max-md:grid-cols-1 gap-5">
+  <div class="w-full grid grid-cols-3 max-md:grid-cols-1 gap-5">
     <div
       class="shadow-lg hover:shadow-green-300 duration-300 flex items-center rounded-lg justify-center bg-green-300"
       style="padding: 20px 0"
@@ -41,6 +41,10 @@ export default {
         { name: "VUE.JS", icon: ["fab", "vuejs"] },
         { name: "NODE.JS", icon: ["fab", "node"] },
         { name: "TYPESCRIPT", icon: "co-typescript" },
+        {
+          name: "EXPRESS.JS",
+          icon: ["fab", "node-js"],
+        },
         {
           name: "QUASAR FRAMEWORK",
           icon: "si-quasar",

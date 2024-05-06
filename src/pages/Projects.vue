@@ -1,5 +1,5 @@
 <template>
-  <div class="pt-2 grid grid-cols-3 max-md:grid-cols-1 gap-2 pb-5">
+  <div class="grid grid-cols-3 max-md:grid-cols-1 gap-2">
     <CardProject
       v-for="(project, index) in projects"
       :key="index"
@@ -9,6 +9,7 @@
       :links="project.links"
       :state="project.state"
       :technologies="project.technologies"
+      :html="project.html"
     />
   </div>
 </template>
@@ -53,6 +54,7 @@ export default {
             { name: "TypeScript", color: "377cc8", icon: "co-typescript" },
             { name: "Tailwind", color: "38bdf8", icon: "si-tailwindcss" },
           ],
+          html: ``,
         },
         // TO DO LIST
         {
@@ -77,6 +79,7 @@ export default {
             { name: "JavaScript", color: "f7e025", icon: ["fab", "js"] },
             { name: "Tailwind", color: "38bdf8", icon: "si-tailwindcss" },
           ],
+          html: ``,
         },
         // CALCULATOR
         {
@@ -101,6 +104,7 @@ export default {
             { name: "CSS3", color: "306af1", icon: ["fab", "css3-alt"] },
             { name: "JavaScript", color: "f7e025", icon: ["fab", "js"] },
           ],
+          html: ``,
         },
         // VALORANT
         {
@@ -126,12 +130,13 @@ export default {
             { name: "JavaScript", color: "f7e025", icon: ["fab", "js"] },
             { name: "Tailwind", color: "38bdf8", icon: "si-tailwindcss" },
           ],
+          html: ``,
         },
         // WEATHER APP
         {
           name: "Weather App",
           image: weatherAppImage,
-          state: "developing",
+          state: "done",
           links: [
             {
               name: "GitHub",
@@ -144,12 +149,13 @@ export default {
               url: "#",
             },
           ],
-          description:
-            "This app typically displays data such as current temperature, wind speed and humidity.",
+          description: `This app typically displays data such as current temperature, wind speed and humidity.`,
           technologies: [
             { name: "React.js", color: "1082a7", icon: ["fab", "react"] },
             { name: "TypeScript", color: "377cc8", icon: "co-typescript" },
+            { name: "CSS3", color: "306af1", icon: ["fab", "css3-alt"] },
           ],
+          html: `<strong> CLICK ON THE MAGNIFYING GLASS. </strong>`,
         },
       ],
     };

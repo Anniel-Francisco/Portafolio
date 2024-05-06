@@ -1,5 +1,5 @@
 <template>
-  <div class="grid grid-cols-4 pt-2 max-md:grid-cols-1 list-none gap-5 pb-5">
+  <div class="grid grid-cols-4 max-md:grid-cols-1 list-none gap-5">
     <div
       class="flex flex-col shadow-lg hover:shadow-red-700 duration-300 rounded-xl rounded-b-lg justify-between border-2 pt-5 border-solid border-red-700"
       v-for="(file, index) in files"

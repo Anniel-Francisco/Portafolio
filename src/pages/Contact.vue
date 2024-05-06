@@ -1,5 +1,5 @@
 <template>
-  <div class="grid gap-5 pt-2 grid-cols-3 max-md:grid-cols-1 pb-5">
+  <div class="grid gap-5 grid-cols-3 max-md:grid-cols-1">
     <div
       class="duration-300 rounded-lg border border-solid border-black flex flex-col justify-center items-start p-5"
       v-for="(contact, index) of data"
