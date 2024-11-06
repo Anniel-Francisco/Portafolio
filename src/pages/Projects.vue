@@ -177,7 +177,7 @@ export default {
             },
           ],
           description:
-            "This is a web app with sign and sign up, and all crud operations. Also, this application was built using MERN. ",
+            "This is a web app with sign in and sign up, and all crud operations. Also, this application was built using MERN. ",
           technologies: [
             { name: "React.js", color: "1082a7", icon: ["fab", "react"] },
             { name: "TypeScript", color: "377cc8", icon: "co-typescript" },
