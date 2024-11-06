@@ -39,11 +39,11 @@ export default {
         { name: "GITHUB", icon: ["fab", "github"] },
         { name: "REACT.JS", icon: ["fab", "react"] },
         { name: "VUE.JS", icon: ["fab", "vuejs"] },
-        { name: "NODE.JS", icon: ["fab", "node"] },
+        { name: "NODE.JS", icon: "fa-node-js" },
         { name: "TYPESCRIPT", icon: "co-typescript" },
         {
           name: "EXPRESS.JS",
-          icon: ["fab", "node-js"],
+          icon: "si-express",
         },
         {
           name: "QUASAR FRAMEWORK",
@@ -55,7 +55,7 @@ export default {
         },
         {
           name: "NEXT.JS",
-          icon: "co-nextjs",
+          icon: "co-next-js",
         },
         {
           name: "MONGODB",

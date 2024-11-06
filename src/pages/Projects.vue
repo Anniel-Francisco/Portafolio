@@ -23,7 +23,7 @@ import apiValorantBackground from "@/assets/api-valorant.png";
 import apiRickAndMorty from "@/assets/rickandmorty-api.png";
 import weatherAppImage from "@/assets/weather-app.png";
 import crudOperationsAppImage from "@/assets/crud-operations.png";
-
+import gashupAppImage from "@/assets/gashup.png"
 export default {
   name: "Projects",
   components: {
@@ -159,6 +159,35 @@ export default {
           ],
           html: `<strong> CLICK ON THE MAGNIFYING GLASS. </strong>`,
         },
+         // GASHUP
+        {
+          name: "GASHUP",
+          image: gashupAppImage,
+          state: "DONE",
+          links: [
+            {
+              name: "GitHub",
+              icon: ["fab", "github"],
+              url: "https://github.com/AnnielDev/gashup-frontend.git",
+            },
+            {
+              name: "Link",
+              icon: ["fas", "link"],
+              url: "",
+            },
+          ],
+          description:
+            "This project is a web application that allows users to create and join communities based on various topics of interest.",
+          technologies: [
+            { name: "Next.js", color: "000", icon: "co-next-js" },
+            { name: "TypeScript", color: "377cc8", icon: "co-typescript" },
+            { name: "Tailwind", color: "38bdf8", icon: "si-tailwindcss" },
+            { name: "NodeJS", color: "72a863", icon: ["fab", "node-js"] },
+            { name: "MongoDB", color: "4ca74b", icon: "si-mongodb" },
+            { name: "Express.js", color: "383838", icon: "si-express" },
+          ], 
+          html: ``,
+        },
         // CRUD OPERATIONS
         {
           name: "CRUD OPERATIONS",
@@ -188,6 +217,7 @@ export default {
           ], 
           html: ``,
         },
+        
       ],
     };
   },
