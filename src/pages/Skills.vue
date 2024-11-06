@@ -53,6 +53,14 @@ export default {
           name: "TAILWIND CSS",
           icon: "si-tailwindcss",
         },
+        {
+          name: "NEXT.JS",
+          icon: "co-nextjs",
+        },
+        {
+          name: "MONGODB",
+          icon: "si-mongodb",
+        },
       ],
     };
   },

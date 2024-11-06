@@ -22,6 +22,8 @@ import calculatorBackground from "@/assets/calculator.png";
 import apiValorantBackground from "@/assets/api-valorant.png";
 import apiRickAndMorty from "@/assets/rickandmorty-api.png";
 import weatherAppImage from "@/assets/weather-app.png";
+import crudOperationsAppImage from "@/assets/crud-operations.png";
+
 export default {
   name: "Projects",
   components: {
@@ -34,12 +36,12 @@ export default {
         {
           name: "RICK AND MORTY",
           image: apiRickAndMorty,
-          state: "developing",
+          state: "done",
           links: [
             {
               name: "GitHub",
               icon: ["fab", "github"],
-              url: "https://github.com/Anniel-Francisco/RICKANDMORTY-API.git",
+              url: "https://github.com/AnnielDev/RICKANDMORTY-API.git",
             },
             {
               name: "Link",
@@ -65,7 +67,7 @@ export default {
             {
               name: "GitHub",
               icon: ["fab", "github"],
-              url: "https://github.com/Anniel-Francisco/TO-DO-LIST.git",
+              url: "https://github.com/AnnielDev/TO-DO-LIST.git",
             },
             {
               name: "Link",
@@ -90,7 +92,7 @@ export default {
             {
               name: "GitHub",
               icon: ["fab", "github"],
-              url: "https://github.com/Anniel-Francisco/Tarea_2_Calculadora_Web.git",
+              url: "https://github.com/AnnielDev/Tarea_2_Calculadora_Web.git",
             },
             {
               name: "Link",
@@ -115,7 +117,7 @@ export default {
             {
               name: "GitHub",
               icon: ["fab", "github"],
-              url: "https://github.com/Anniel-Francisco/API-VALORANT.git",
+              url: "https://github.com/AnnielDev/API-VALORANT.git",
             },
             {
               name: "Link",
@@ -141,7 +143,7 @@ export default {
             {
               name: "GitHub",
               icon: ["fab", "github"],
-              url: "https://github.com/Anniel-Francisco/Weather-App.git",
+              url: "https://github.com/AnnielDev/Weather-App.git",
             },
             {
               name: "Link",
@@ -156,6 +158,35 @@ export default {
             { name: "CSS3", color: "306af1", icon: ["fab", "css3-alt"] },
           ],
           html: `<strong> CLICK ON THE MAGNIFYING GLASS. </strong>`,
+        },
+        // CRUD OPERATIONS
+        {
+          name: "CRUD OPERATIONS",
+          image: crudOperationsAppImage,
+          state: "developing",
+          links: [
+            {
+              name: "GitHub",
+              icon: ["fab", "github"],
+              url: "https://github.com/AnnielDev/crud-frontend.git",
+            },
+            {
+              name: "Link",
+              icon: ["fas", "link"],
+              url: "",
+            },
+          ],
+          description:
+            "This is a web app with sign and sign up, and all crud operations. Also, this application was built using MERN. ",
+          technologies: [
+            { name: "React.js", color: "1082a7", icon: ["fab", "react"] },
+            { name: "TypeScript", color: "377cc8", icon: "co-typescript" },
+            { name: "Tailwind", color: "38bdf8", icon: "si-tailwindcss" },
+            { name: "NodeJS", color: "72a863", icon: ["fab", "node-js"] },
+            { name: "MongoDB", color: "4ca74b", icon: "si-mongodb" },
+            { name: "Express.js", color: "383838", icon: "si-express" },
+          ], 
+          html: ``,
         },
       ],
     };
