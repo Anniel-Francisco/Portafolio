@@ -51,9 +51,15 @@ export default {
         },
         {
           icon: ["fab", "linkedin"],
-          key: "Linkedin",
+          key: "LinkedIn",
           value:
             "https://www.linkedin.com/in/anniel-francisco-reyes-javier-b22347274/",
+          label: "",
+        },
+        {
+          icon: ["fab", "github"],
+          key: "GitHub",
+          value: "https://github.com/AnnielDev",
           label: "",
         },
       ],
