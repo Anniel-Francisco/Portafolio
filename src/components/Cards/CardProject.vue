@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col relative justify-between rounded-sm">
+  <div class="flex flex-col rounded-sm">
     <div>
       <img
         :src="image"
