@@ -1,66 +1,64 @@
 <template>
-  <div class="w-full grid grid-cols-3 max-md:grid-cols-1 gap-5">
-    <div
-      class="shadow-lg hover:shadow-green-300 duration-300 flex items-center rounded-lg justify-center bg-green-300"
-      style="padding: 20px 0"
-      v-for="(skill, index) of skills"
-      :key="index"
-    >
-      <v-icon
-        v-if="typeof skill.icon == 'string'"
-        :name="skill.icon"
-        class="mr-3"
-        scale="2"
-      />
-      <font-awesome-icon
-        v-else
-        class="mr-3 text-black"
-        :icon="skill.icon"
-        size="2xl"
-      />
-      <span class="font-semibold text-xl uppercase text-black">
-        {{ skill.name }}
-      </span>
-    </div>
+  <div class="w-full grid grid-cols-3 max-md:grid-cols-1 gap-5 py-4">
+    <CardSkill name="Frontend" :data="frontendSkills" />
+    <CardSkill name="backend" :data="backendSkills" />
+    <CardSkill name="database" :data="databaseSkills" />
+
+    <CardSkill name="Others" :data="otherSkills" />
+
   </div>
 </template>
 
 <script>
+import CardSkill from "../components/Cards/CardSkill.vue";
 export default {
   name: "Skills",
+  components: {
+    CardSkill,
+  },
   data() {
     return {
-      skills: [
-        { name: "HTML5", icon: ["fab", "html5"] },
-        { name: "CSS3", icon: ["fab", "css3-alt"] },
-        { name: "JAVASCRIPT", icon: ["fab", "js"] },
-        { name: "SQL SERVER", icon: ["fas", "database"] },
-        { name: "GIT", icon: ["fab", "git-alt"] },
-        { name: "GITHUB", icon: ["fab", "github"] },
-        { name: "REACT.JS", icon: ["fab", "react"] },
-        { name: "VUE.JS", icon: ["fab", "vuejs"] },
-        { name: "NODE.JS", icon: "fa-node-js" },
-        { name: "TYPESCRIPT", icon: "co-typescript" },
-        {
-          name: "EXPRESS.JS",
-          icon: "si-express",
-        },
+      frontendSkills: [
+        { name: "HTML5", icon: 'vi-file-type-html'},
+        { name: "CSS3", icon: 'vi-file-type-css' },
+        { name: "JAVASCRIPT", icon: 'vi-file-type-js-official' },
+        { name: "REACT.JS", icon: 'vi-file-type-reactjs' },
+        { name: "VUE.JS", icon: 'vi-file-type-vue' },
+        { name: "TYPESCRIPT", icon: "vi-file-type-typescript-official" },
         {
           name: "QUASAR FRAMEWORK",
-          icon: "si-quasar",
+          icon: "vi-file-type-light-quasar",
         },
         {
           name: "TAILWIND CSS",
-          icon: "si-tailwindcss",
+          icon: "vi-file-type-tailwind",
         },
         {
           name: "NEXT.JS",
           icon: "co-next-js",
         },
+      ],
+      backendSkills: [
+        {
+          name: "EXPRESS.JS",
+          icon: "si-express",
+        },
+        { name: "NODE.JS", icon: "vi-file-type-node" },
+      ],
+      databaseSkills: [
+        { name: "SQL SERVER", icon: 'vi-file-type-plsql' },
         {
           name: "MONGODB",
-          icon: "si-mongodb",
+          icon: "vi-file-type-mongo",
         },
+      ],
+      otherSkills: [
+        { name: "GIT", icon: 'vi-file-type-git' },
+        { name: "GITHUB", icon: ["fab", "github"] },
+        { name: "Figma", icon: 'fa-figma' },
+        { name: "Postman", icon: 'co-postman' },
+        { name: "VSCode", icon: 'vi-file-type-vscode' },
+
       ],
     };
   },

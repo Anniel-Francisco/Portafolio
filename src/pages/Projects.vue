@@ -1,16 +1,44 @@
 <template>
-  <div class="grid grid-cols-3 max-md:grid-cols-1 gap-2">
-    <CardProject
-      v-for="(project, index) in projects"
-      :key="index"
-      :name="project.name"
-      :description="project.description"
-      :image="project.image"
-      :links="project.links"
-      :state="project.state"
-      :technologies="project.technologies"
-      :html="project.html"
-    />
+  <div class="flex flex-col">
+    <div class="flex items-center gap-2 my-4">
+      <!-- DEVELOPING-->
+      <div>
+        <span
+          :style="{
+            backgroundColor: '#f7e025',
+          }"
+          class="p-1 rounded-sm font-semibold"
+        >
+          DEVELOPING
+        </span>
+        <span> - project is in development process</span>
+      </div>
+      <!-- DONE-->
+      <div>
+        <span
+          :style="{
+            backgroundColor: '#55e0a2',
+          }"
+          class="p-1 rounded-sm font-semibold"
+        >
+          DONE
+        </span>
+        <span> - finished project</span>
+      </div>
+    </div>
+    <div class="grid grid-cols-3 max-md:grid-cols-1 gap-2">
+      <CardProject
+        v-for="(project, index) in projects"
+        :key="index"
+        :name="project.name"
+        :description="project.description"
+        :image="project.image"
+        :links="project.links"
+        :state="project.state"
+        :technologies="project.technologies"
+        :html="project.html"
+      />
+    </div>
   </div>
 </template>
 
@@ -23,7 +51,7 @@ import apiValorantBackground from "@/assets/api-valorant.png";
 import apiRickAndMorty from "@/assets/rickandmorty-api.png";
 import weatherAppImage from "@/assets/weather-app.png";
 import crudOperationsAppImage from "@/assets/crud-operations.png";
-import gashupAppImage from "@/assets/gashup.png"
+import gashupAppImage from "@/assets/gashup.png";
 export default {
   name: "Projects",
   components: {
@@ -159,7 +187,7 @@ export default {
           ],
           html: `<strong> CLICK ON THE MAGNIFYING GLASS. </strong>`,
         },
-         // GASHUP
+        // GASHUP
         {
           name: "GASHUP",
           image: gashupAppImage,
@@ -185,14 +213,14 @@ export default {
             { name: "NodeJS", color: "72a863", icon: ["fab", "node-js"] },
             { name: "MongoDB", color: "4ca74b", icon: "si-mongodb" },
             { name: "Express.js", color: "383838", icon: "si-express" },
-          ], 
+          ],
           html: ``,
         },
         // CRUD OPERATIONS
         {
           name: "CRUD OPERATIONS",
           image: crudOperationsAppImage,
-          state: "developing",
+          state: "done",
           links: [
             {
               name: "GitHub",
@@ -214,10 +242,9 @@ export default {
             { name: "NodeJS", color: "72a863", icon: ["fab", "node-js"] },
             { name: "MongoDB", color: "4ca74b", icon: "si-mongodb" },
             { name: "Express.js", color: "383838", icon: "si-express" },
-          ], 
+          ],
           html: ``,
         },
-        
       ],
     };
   },
