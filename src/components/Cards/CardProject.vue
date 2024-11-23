@@ -1,5 +1,13 @@
 <template>
   <div class="flex flex-col rounded-sm">
+    <div>
+      <img
+        :src="image"
+        alt=""
+        style="height: 200px; width: 100%"
+        class="rounded-t-sm"
+      />
+    </div>
     <div class="flex flex-col justify-between mt-2">
       <!-- name and description -->
       <div v-if="name && description">
