@@ -230,7 +230,7 @@ export default {
             {
               name: "Link",
               icon: ["fas", "link"],
-              url: "",
+              url: "https://afrj-crud-operations.netlify.app",
             },
           ],
           description:
