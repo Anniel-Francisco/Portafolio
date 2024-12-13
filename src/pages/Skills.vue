@@ -3,9 +3,7 @@
     <CardSkill name="Frontend" :data="frontendSkills" />
     <CardSkill name="backend" :data="backendSkills" />
     <CardSkill name="database" :data="databaseSkills" />
-
     <CardSkill name="Others" :data="otherSkills" />
-
   </div>
 </template>
 
@@ -24,6 +22,7 @@ export default {
         { name: "JAVASCRIPT", icon: 'vi-file-type-js-official' },
         { name: "REACT.JS", icon: 'vi-file-type-reactjs' },
         { name: "VUE.JS", icon: 'vi-file-type-vue' },
+        { name: "ANGULAR JS", icon: 'vi-file-type-angular' },
         { name: "TYPESCRIPT", icon: "vi-file-type-typescript-official" },
         {
           name: "QUASAR FRAMEWORK",

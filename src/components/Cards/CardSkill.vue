@@ -23,7 +23,7 @@
           :icon="skill.icon"
           size="2xl"
         />
-        <span>
+        <span class="uppercase">
           {{ skill.name }}
         </span>
       </div>
