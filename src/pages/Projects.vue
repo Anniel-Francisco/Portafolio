@@ -264,7 +264,7 @@ export default {
             },
           ],
           description:
-            "Converter is an application that allows conversions of various units, as well as currencies from the US dollar.",
+            "Converter is an application that allows you to convert various units, as well as currencies, starting from the US dollar.",
           technologies: [
             { name: "Angular JS", color: "dd0031", icon: "co-angular" },
             { name: "TypeScript", color: "377cc8", icon: "co-typescript" },
