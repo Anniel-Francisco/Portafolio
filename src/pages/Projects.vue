@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-col">
-    <div class="flex items-center gap-2 my-4">
+    <div class="flex max-md:flex-col md:items-center gap-2 my-4">
       <!-- DEVELOPING-->
       <div>
         <span
