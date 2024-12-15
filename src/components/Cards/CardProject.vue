@@ -22,7 +22,7 @@
             {{ state }}
           </span>
         </h3>
-        <p class="text-base">{{ description }} <span v-html="html"></span></p>
+        <p class="text-base">{{ description }} <span v-html="html" /></p>
       </div>
       <!-- technologies  -->
       <div v-if="technologies.length > 0" class="grid grid-cols-3 gap-2 mt-2">
