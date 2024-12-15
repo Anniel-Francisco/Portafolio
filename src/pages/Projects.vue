@@ -52,6 +52,7 @@ import apiRickAndMorty from "@/assets/rickandmorty-api.png";
 import weatherAppImage from "@/assets/weather-app.png";
 import crudOperationsAppImage from "@/assets/crud-operations.png";
 import gashupAppImage from "@/assets/gashup.png";
+import converterAppImage from "@/assets/converter.png";
 export default {
   name: "Projects",
   components: {
@@ -234,7 +235,7 @@ export default {
             },
           ],
           description:
-            "This is a web app with sign in and sign up, and all crud operations. Also, this application was built using MERN. ",
+            "This is a web app with sign in and sign up, and all crud operations. Also, this application was built using MERN.",
           technologies: [
             { name: "React.js", color: "1082a7", icon: ["fab", "react"] },
             { name: "TypeScript", color: "377cc8", icon: "co-typescript" },
@@ -242,6 +243,32 @@ export default {
             { name: "NodeJS", color: "72a863", icon: ["fab", "node-js"] },
             { name: "MongoDB", color: "4ca74b", icon: "si-mongodb" },
             { name: "Express.js", color: "383838", icon: "si-express" },
+          ],
+          html: ``,
+        },
+        // CONVERTER
+        {
+          name: "CONVERTER",
+          image: converterAppImage,
+          state: "developing",
+          links: [
+            {
+              name: "GitHub",
+              icon: ["fab", "github"],
+              url: "https://github.com/AnnielDev/converter.git",
+            },
+            {
+              name: "Link",
+              icon: ["fas", "link"],
+              url: "",
+            },
+          ],
+          description:
+            "Converter is an application that allows conversions of various units, as well as currencies from the US dollar.",
+          technologies: [
+            { name: "Angular JS", color: "dd0031", icon: "co-angular" },
+            { name: "TypeScript", color: "377cc8", icon: "co-typescript" },
+            { name: "Tailwind", color: "38bdf8", icon: "si-tailwindcss" },
           ],
           html: ``,
         },

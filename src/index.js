@@ -31,6 +31,7 @@ import {
   ViFileTypeJsOfficial,
   ViFileTypeVscode,
   ViFileTypeAngular,
+  CoAngular,
 } from "oh-vue-icons/icons";
 
 // FontAwesomeIcons
@@ -82,7 +83,8 @@ addIcons(
   ViFileTypeJsOfficial,
   ViFileTypeVscode,
   SiMongodb,
-  ViFileTypeAngular
+  ViFileTypeAngular,
+  CoAngular
 );
 library.add(
   faUser,
