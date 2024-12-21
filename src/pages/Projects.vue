@@ -75,7 +75,7 @@ export default {
             {
               name: "Link",
               icon: ["fas", "link"],
-              url: "https://afrj-api-rickandmorty.netlify.app/",
+              url: "https://afrj-rickandmorty-api.netlify.app/",
             },
           ],
           description:
