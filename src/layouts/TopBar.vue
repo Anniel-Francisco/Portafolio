@@ -78,7 +78,7 @@ export default {
           route: "/contact",
         },
         {
-          icon: ["fas", "user"],
+          icon: ["fas", "file"],
           name: "Resume",
           route: "/resume",
         },
@@ -87,7 +87,20 @@ export default {
   },
 
   methods: {
+    downloadResume() {
+      const link = document.createElement("a");
+      link.href = "Resume.pdf";
+      link.download = "Resume.pdf";
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    },
     goToPage(route) {
+      if (route === "/resume") {
+        this.downloadResume();
+        this.closeMenu();
+        return;
+      }
       this.$router.push({ path: route });
       if (window.innerWidth <= 768) {
         this.closeMenu();

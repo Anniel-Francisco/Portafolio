@@ -24,11 +24,6 @@ const routes = [
         name: "contact",
         component: () => import("/src/pages/Contact.vue"),
       },
-      {
-        path: "/resume",
-        name: "resume",
-        component: () => import("/src/pages/Resume.vue"),
-      },
     ],
   },
   {

@@ -46,6 +46,7 @@ import {
   faDatabase,
   faBars,
   faTriangleExclamation,
+  faFile,
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faLinkedin,
@@ -106,7 +107,8 @@ library.add(
   faReact,
   faVuejs,
   faBars,
-  faTriangleExclamation
+  faTriangleExclamation,
+  faFile
 );
 
 createApp(App)
