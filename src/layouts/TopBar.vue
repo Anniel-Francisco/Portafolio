@@ -118,9 +118,11 @@ export default {
       }
     },
     closeMenu() {
-      const list = document.querySelector(".list");
-      list.style.display = "none";
-      this.device = false;
+      if (window.innerWidth <= 768) {
+        const list = document.querySelector(".list");
+        list.style.display = "none";
+        this.device = false;
+      }
     },
   },
 };
