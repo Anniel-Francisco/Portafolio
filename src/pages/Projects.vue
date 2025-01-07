@@ -53,6 +53,7 @@ import weatherAppImage from "@/assets/weather-app.png";
 import crudOperationsAppImage from "@/assets/crud-operations.png";
 import gashupAppImage from "@/assets/gashup.png";
 import converterAppImage from "@/assets/converter.png";
+import onlineStoreAppImage from "@/assets/online-store-app.png";
 export default {
   name: "Projects",
   components: {
@@ -269,6 +270,32 @@ export default {
             { name: "Angular JS", color: "dd0031", icon: "co-angular" },
             { name: "TypeScript", color: "377cc8", icon: "co-typescript" },
             { name: "Tailwind", color: "38bdf8", icon: "si-tailwindcss" },
+          ],
+          html: ``,
+        },
+        // ONLINE STORE APP
+        {
+          name: "Online Store App",
+          image: onlineStoreAppImage,
+          state: "done",
+          links: [
+            {
+              name: "GitHub",
+              icon: ["fab", "github"],
+              url: "https://github.com/AnnielDev/online-store-app.git",
+            },
+            {
+              name: "Link",
+              icon: ["fas", "link"],
+              url: "https://online-store-app-ivory.vercel.app/",
+            },
+          ],
+          description:
+            "This is a project based on a technical test that I carried out, it consists of performing some basic operations of an online store.",
+          technologies: [
+            { name: "Vue.js", color: "47ba87", icon: ["fab", "vuejs"] },
+            { name: "TypeScript", color: "377cc8", icon: "co-typescript" },
+            { name: "Vuetify", color: "1697f6", icon: "si-vuetify" },
           ],
           html: ``,
         },
