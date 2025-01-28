@@ -34,6 +34,7 @@ import {
   CoAngular,
   SiVuetify,
   ViFileTypeReactts,
+  SiIcloud,
 } from "oh-vue-icons/icons";
 
 // FontAwesomeIcons
@@ -89,7 +90,8 @@ addIcons(
   ViFileTypeAngular,
   CoAngular,
   SiVuetify,
-  ViFileTypeReactts
+  ViFileTypeReactts,
+  SiIcloud
 );
 library.add(
   faUser,

@@ -54,6 +54,8 @@ import crudOperationsAppImage from "@/assets/crud-operations.png";
 import gashupAppImage from "@/assets/gashup.png";
 import converterAppImage from "@/assets/converter.png";
 import onlineStoreAppImage from "@/assets/online-store-app.png";
+import fsDaycareImage from '@/assets/fs-daycare.png'
+
 export default {
   name: "Projects",
   components: {
@@ -296,6 +298,34 @@ export default {
             { name: "Vue.js", color: "47ba87", icon: ["fab", "vuejs"] },
             { name: "TypeScript", color: "377cc8", icon: "co-typescript" },
             { name: "Vuetify", color: "1697f6", icon: "si-vuetify" },
+          ],
+          html: ``,
+        },
+         // FS DAYCARE
+         {
+          name: "FS DAYCARE",
+          image: fsDaycareImage,
+          state: "done",
+          links: [
+            {
+              name: "GitHub",
+              icon: ["fab", "github"],
+              url: "https://github.com/AnnielDev/fs-daycare.git",
+            },
+            {
+              name: "Link",
+              icon: ["fas", "link"],
+              url: "https://fs-daycare.netlify.app",
+            },
+          ],
+          description:
+            "This is a project I did for a daycare center in the United States, it is a website with its own section to upload photos.",
+          technologies: [
+            { name: "Vue.js", color: "47ba87", icon: ["fab", "vuejs"] },
+            { name: "TypeScript", color: "377cc8", icon: "co-typescript" },
+            { name: "Tailwind", color: "38bdf8", icon: "si-tailwindcss" },
+            { name: "Express.js", color: "383838", icon: "si-express" },
+            { name: "Cloudinary", color: "4c5ecc", icon: "si-icloud" },
           ],
           html: ``,
         },
